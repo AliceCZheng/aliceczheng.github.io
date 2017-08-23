@@ -1,0 +1,193 @@
+body {
+/*  font-family: 'Noxie One', sans-serif;*/
+  /*font-family: 'Bitter', serif;*/
+  font-family: 'Roboto', monospace;
+
+  font-weight: 300;
+}
+
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content:url(images/lightgif.gif) url(images/cupgif.gif) url(images/typewritergif.gif) url(images/drawinggif.gif) url(images/foxgif.gif);
+}
+
+header {
+  padding: 20px 0;
+}
+
+
+.container {
+  /*border-bottom: 2px solid #05A8AA;*/
+}
+
+
+.row {
+  /*margin-top: 199px;
+  margin-bottom: 71.5px;*/
+  font-size: 15px;
+}
+.nav-b {
+
+  color: #d6d1d1;
+  float:left;
+
+}
+.nav-b:hover {
+  color: #404040;
+  
+  text-decoration: none;
+
+}
+
+.workplease{
+  /*border: 3px solid grey;;*/
+  /*width:200px;
+  height:291.5px;*/
+  float:left;
+}
+
+#AZ {
+  margin-right: 35px;
+  margin-left: 140px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+#about {
+  margin-right: 45px;
+  margin-left: 55px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+#portfolio {
+  margin-right: 5px;
+  margin-left: 17px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  
+}
+
+#resume {
+  margin-right: 70px;
+  margin-left: 80px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+#contact {
+  margin-right: 30px;
+  margin-left: 35px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  
+}
+.workplease {
+  margin-top: 20;
+  margin-bottom: 20;
+}
+
+
+
+.bg {
+  background-color: #FFF;
+  font-family: 'Bitter', serif;
+}
+
+#pls {
+  position: relative;
+  background-image: url(images/website.png);
+  background-size: 765.5px 291.5px;
+  vertical-align: middle;
+  width: 765.5px;
+  height: 291.5px;
+  margin-top: 300px;
+  z-index: 5;
+
+}
+
+
+
+#navigationheader {
+ 
+  background-image: url(images/websitenav.png);
+  background-size:  762.24px 161px;
+ 
+
+  width: 762.24px;
+  height: 161px;
+
+
+ 
+  position: relative;
+
+
+}
+/*
+.nav:hover {
+  display: none;
+}
+*/
+#a:hover ~ #pls{
+  background-color: red;
+}
+
+
+
+.fox {
+  margin-left: 200px;
+
+}
+
+.test {
+  /*border: 3px solid black;*/
+}
+
+.a {
+  color: #404040;
+}
+
+
+
+#AZn {
+  margin-right: 115px;
+  margin-left: 55px;
+  margin-top: 57px;
+  margin-bottom: 5px;
+  font-size: 50px;
+  color: #404040;
+
+}
+
+#aboutn {
+  margin-right: 8px;
+  margin-left: 15px;
+  margin-top: 110px;
+  margin-bottom: 5px;
+
+}
+
+#portfolion {
+  margin-right: 5px;
+  margin-left: 6px;
+  margin-top: 110px;
+  margin-bottom: 5px;
+  
+}
+
+#resumen {
+  margin-right: 25px;
+  margin-left: 18px;
+  margin-top: 110px;
+  margin-bottom: 5px;
+}
+
+#contactn {
+  margin-right: 5px;
+  margin-left: 6px;
+  margin-top: 110px;
+  margin-bottom: 5px;
+  
+}
+
+
