@@ -1,7 +1,7 @@
 body {
 /*  font-family: 'Noxie One', sans-serif;*/
   /*font-family: 'Bitter', serif;*/
-  font-family: 'Roboto', monospace;
+  font-family: 'Raleway', sans-serif;
 
   font-weight: 300;
 }
@@ -12,7 +12,7 @@ body::after{
 }
 
 header {
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 
@@ -28,7 +28,7 @@ header {
 }
 .nav-b {
 
-  color: #d6d1d1;
+  color: #A3A3A3;
   float:left;
 
 }
@@ -47,37 +47,37 @@ header {
 }
 
 #AZ {
-  margin-right: 35px;
+  margin-right: 70px;
   margin-left: 140px;
   margin-top: 200px;
   margin-bottom: 50px;
 }
 
 #about {
-  margin-right: 45px;
-  margin-left: 55px;
+  margin-right: 55px;
+  margin-left: 40px;
   margin-top: 200px;
   margin-bottom: 50px;
 }
 
 #portfolio {
-  margin-right: 5px;
-  margin-left: 17px;
+  margin-right: 23px;
+  margin-left: 10px;
   margin-top: 200px;
   margin-bottom: 50px;
   
 }
 
 #resume {
-  margin-right: 70px;
-  margin-left: 80px;
+  margin-right: 75px;
+  margin-left: 65px;
   margin-top: 200px;
   margin-bottom: 50px;
 }
 
 #contact {
-  margin-right: 30px;
-  margin-left: 35px;
+  margin-right: 35px;
+  margin-left: 30px;
   margin-top: 200px;
   margin-bottom: 50px;
   
@@ -91,7 +91,7 @@ header {
 
 .bg {
   background-color: #FFF;
-  font-family: 'Bitter', serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 #pls {
@@ -101,8 +101,9 @@ header {
   vertical-align: middle;
   width: 765.5px;
   height: 291.5px;
-  margin-top: 300px;
+  margin-top: 0px;
   z-index: 5;
+  font-size: 15px;
 
 }
 
@@ -112,10 +113,11 @@ header {
  
   background-image: url(images/websitenav.png);
   background-size:  762.24px 161px;
- 
+
 
   width: 762.24px;
   height: 161px;
+  font-size: 12px;
 
 
  
@@ -160,8 +162,8 @@ header {
 }
 
 #aboutn {
-  margin-right: 8px;
-  margin-left: 15px;
+  margin-right: 25px;
+  margin-left: 30px;
   margin-top: 110px;
   margin-bottom: 5px;
 
@@ -169,7 +171,7 @@ header {
 
 #portfolion {
   margin-right: 5px;
-  margin-left: 6px;
+  margin-left: 0px;
   margin-top: 110px;
   margin-bottom: 5px;
   
@@ -177,17 +179,69 @@ header {
 
 #resumen {
   margin-right: 25px;
-  margin-left: 18px;
+  margin-left: 27px;
   margin-top: 110px;
   margin-bottom: 5px;
 }
 
 #contactn {
-  margin-right: 5px;
-  margin-left: 6px;
+  margin-right: 10px;
+  margin-left: 17px;
   margin-top: 110px;
   margin-bottom: 5px;
   
 }
+
+#dl {
+  color: #ADDFFF;
+  text-decoration: none;
+}
+
+#dl:hover {
+  color: #404040;
+}
+
+#title {
+  margin-top: 100px;
+  font-size: 70px;
+  margin-left: 100px;
+
+}
+
+
+#resume {
+  text-align: right;
+  float: left;
+}
+
+#resumeright {
+  text-align: left;
+  float:left;
+}
+
+img{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+
+}
+
+#abouttext {
+  margin-top: 40px;
+  max-width: 750px;
+  text-align: left;
+  text-indent: 20px;
+  margin-bottom: 100px;
+
+}
+
+.name {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 300px;
+}
+
+
 
 
