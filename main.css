@@ -8,7 +8,7 @@ body {
 
 body::after{
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-    content:url(images/lightgif.gif) url(images/cupgif.gif) url(images/typewritergif.gif) url(images/drawinggif.gif) url(images/foxgif.gif);
+    content:url(images/lightgif.gif) url(images/cupgif.gif) url(images/typewritergif.gif) url(images/drawinggif.gif) url(images/foxgif.gif) url(images/aboutpic.jpg);
 }
 
 header {
@@ -195,6 +195,8 @@ header {
 #dl {
   color: #ADDFFF;
   text-decoration: none;
+  font-size: 15px;
+
 }
 
 #dl:hover {
@@ -209,14 +211,17 @@ header {
 }
 
 
-#resume {
+#resumel {
   text-align: right;
   float: left;
+  margin: 0px;
+
 }
 
 #resumeright {
   text-align: left;
   float:left;
+  margin-top: 0px
 }
 
 img{
@@ -233,6 +238,7 @@ img{
   text-align: left;
   text-indent: 20px;
   margin-bottom: 100px;
+  font-size: 20px;
 
 }
 
@@ -242,6 +248,67 @@ img{
   margin-top: 300px;
 }
 
+.resumet {
+  line-height: 20px;
+}
 
+#resumesmall {
+  line-height: 15px;
+}
+
+#line {
+  border-bottom: solid #A4A4A4;
+  border-width: thin;
+  width: 600px;
+}
+
+#edu {
+  margin-bottom: 70px;
+}
+
+#skills {
+  margin-bottom: 90px;
+}
+
+#jobone {
+  margin-top: 42px;
+  margin-bottom: 5px;
+}
+
+.date {
+  color: #9A9A9A;
+}
+
+#ex {
+  margin-bottom: 0px;
+}
+
+#june {
+  margin-bottom: 62px;
+}
+
+#jobtwo {
+  margin-top:15px;
+}
+#jan {
+  margin-bottom: 120px;
+}
+
+#sg {
+  margin-top: 80px;
+}
+
+#sept {
+  margin-bottom: 110px;
+}
+
+#dt {
+  margin-top: 70px;
+
+}
+
+#text {
+  margin-bottom: 100px
+}
 
 
