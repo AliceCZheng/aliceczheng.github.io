@@ -13,6 +13,7 @@ body::after{
 
 header {
   padding-top: 20px;
+  /**/
 }
 
 
@@ -62,7 +63,7 @@ header {
 
 #portfolio {
   margin-right: 23px;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-top: 200px;
   margin-bottom: 50px;
   
@@ -70,7 +71,7 @@ header {
 
 #resume {
   margin-right: 75px;
-  margin-left: 65px;
+  margin-left: 60px;
   margin-top: 200px;
   margin-bottom: 50px;
 }
@@ -95,15 +96,19 @@ header {
 }
 
 #pls {
-  position: relative;
+  position: absolute;
   background-image: url(images/website.png);
   background-size: 765.5px 291.5px;
   vertical-align: middle;
   width: 765.5px;
   height: 291.5px;
-  margin-top: 0px;
+  
+  
   z-index: 5;
   font-size: 15px;
+
+
+
 
 }
 
@@ -129,7 +134,7 @@ header {
 .nav:hover {
   display: none;
 }
-*/
+
 #a:hover ~ #pls{
   background-color: red;
 }
@@ -143,6 +148,9 @@ header {
 
 .test {
   /*border: 3px solid black;*/
+
+.nav {
+  position: relative;
 }
 
 .a {
@@ -193,7 +201,7 @@ header {
 }
 
 #dl {
-  color: #ADDFFF;
+  color: #91C2C6;
   text-decoration: none;
   font-size: 15px;
 
@@ -243,9 +251,15 @@ img{
 }
 
 .name {
+
+  position: relative;
   text-align: center;
   font-size: 20px;
-  margin-top: 300px;
+  margin-top: 250px;
+
+  
+
+
 }
 
 .resumet {
@@ -309,6 +323,13 @@ img{
 
 #text {
   margin-bottom: 100px
+}
+
+#contactinfo {
+  margin-top: 50px;
+  text-align: center;
+  line-height: 20px;
+
 }
 
 
