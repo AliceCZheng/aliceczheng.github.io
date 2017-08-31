@@ -96,7 +96,7 @@ header {
 }
 
 #pls {
-  position: absolute;
+  position: relative;
   background-image: url(images/website.png);
   background-size: 765.5px 291.5px;
   vertical-align: middle;
