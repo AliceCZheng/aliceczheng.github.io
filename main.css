@@ -326,10 +326,162 @@ img{
 }
 
 #contactinfo {
-  margin-top: 50px;
+  margin-top: 10px;
   text-align: center;
-  line-height: 20px;
+  line-height: 10px;
+}
+
+
+#portspace {
+  margin: 80px;
+  margin-top: 30px;
 
 }
+
+
+.port { 
+background: url(images/putnam.jpg) 50% 30% no-repeat; /* 50% 50% centers image in div */
+background-size: 300px auto;
+width: 300px;
+height: 300px;
+text-align: center;
+float:left;
+margin: 30px
+
+
+}
+
+.port a {
+display: block;
+width: 300px;
+height: 300px;
+
+}
+
+.port a:hover { 
+  display: inline-block;
+ }
+
+.port2 { 
+background: url(images/dizzy.jpg) 50% 30% no-repeat; /* 50% 50% centers image in div */
+background-size: 300px auto;
+width: 300px;
+height: 300px;
+text-align: center;
+float:left;
+margin: 30px
+
+}
+
+.port2 a {
+display: block;
+width: 300px;
+height: 300px;
+}
+
+
+.port3 { 
+background: url(images/stemtvoptions.jpg) 50% 30% no-repeat; /* 50% 50% centers image in div */
+background-size: 300px auto;
+width: 300px;
+height: 300px;
+text-align: center;
+float:left;
+margin: 30px
+
+}
+
+.port3 a {
+display: block;
+width: 300px;
+height: 300px;
+}
+
+.port4 { 
+background: url(images/faraway.jpg) 50% 30% no-repeat; /* 50% 50% centers image in div */
+background-size: 300px auto;
+width: 300px;
+height: 300px;
+text-align: center;
+float:left;
+margin: 30px
+
+}
+
+.port4 a {
+display: block;
+width: 300px;
+height: 300px;
+}
+
+.port5 { 
+background: url(images/dancer.jpg) 50% 30% no-repeat; /* 50% 50% centers image in div */
+background-size: 300px auto;
+width: 300px;
+height: 300px;
+text-align: center;
+float:left;
+margin: 30px
+
+}
+
+.port5 a {
+display: block;
+width: 300px;
+height: 300px;
+}
+
+.port6 { 
+background: url(images/throwaway.jpg) 50% 30% no-repeat; /* 50% 50% centers image in div */
+background-size: 300px auto;
+width: 300px;
+height: 300px;
+text-align: center;
+float:left;
+margin: 30px
+
+}
+
+.port6 a {
+display: block;
+width: 300px;
+height: 300px;
+}
+
+.portgroup {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
