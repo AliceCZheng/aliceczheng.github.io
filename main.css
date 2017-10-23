@@ -402,7 +402,7 @@ height: 300px;
 
 h2 {
   margin-left: 10%;
-  margin-right: 10%;
+  margin-right: 5%;
 
 }
 
@@ -434,6 +434,8 @@ h2 {
 #dizzy:hover #dizzytxt{
   display: inline;
   opacity: 1;
+  text-decoration: none;
+  color: white;
 }
 #dizzytxt{
   margin-top: 42%;
@@ -509,6 +511,8 @@ h2 {
 #highground:hover #highgroundtxt{
   display: inline;
   opacity: 1;
+  text-decoration: none;
+  color: white;
 }
 #highgroundtxt{
   margin-top: 42%;
@@ -516,6 +520,7 @@ h2 {
     background-color: #34282C;
     color: white;
     margin-bottom: 35%;
+
 }
 
 #faraway:hover {
@@ -524,6 +529,8 @@ h2 {
 #faraway:hover #farawaytxt{
   display: inline;
   opacity: 1;
+  text-decoration: none;
+  color: white;
 }
 #farawaytxt{
   margin-top: 42%;
@@ -539,6 +546,8 @@ h2 {
 #artshowpc:hover #artshowpctxt{
   display: inline;
   opacity: 1;
+  text-decoration: none;
+  color: white;
 }
 #artshowpctxt{
   margin-top: 42%;
