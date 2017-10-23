@@ -340,9 +340,10 @@ img{
 
 }
 
-.portrow {
+#portrow {
   margin-left: 10%;
   margin-right: 10%;
+  max-width: 1000px;
 
 }
 
@@ -389,163 +390,6 @@ height: 300px;
     
  }
 
-#posters {
-  opacity: 0;
-}
-
-
-.port2 { 
-background: url(images/dizzy.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
-background-size: 300px auto;
-width: 300px;
-height: 300px;
-text-align: center;
-float:left;
-display: block;
-margin: 30px;
-
-
-}
-
-.port2 a {
-display: none;
-width: 300px;
-height: 300px;
-}
-
-
-.port3 { 
-background: url(images/stemtvoptions.jpg) 50% 30% no-repeat; /* 50% 50% centers image in div */
-background-size: 300px auto;
-width: 300px;
-height: 300px;
-text-align: center;
-float:left;
-margin: 30px;
-
-
-}
-
-.port3 a {
-display: none;
-width: 300px;
-height: 300px;
-}
-
-.port4 { 
-background: url(images/faraway.jpg) 50% 30% no-repeat; /* 50% 50% centers image in div */
-background-size: auto 300px;
-width: 300px;
-height: 300px;
-text-align: center;
-float:left;
-margin: 30px;
-
-
-}
-
-.port4 a {
-display: none;
-width: 300px;
-height: 300px;
-}
-
-.port5 { 
-background: url(images/dancer.jpg) 50% 30% no-repeat; /* 50% 50% centers image in div */
-background-size: auto 300px;
-width: 300px;
-height: 300px;
-text-align: center;
-float:left;
-margin: 30px;
-
-
-}
-
-.port5 a {
-display: none;
-width: 300px;
-height: 300px;
-}
-
-.port6 { 
-background: url(images/throwaway.jpg) 50% 30% no-repeat; /* 50% 50% centers image in div */
-background-size: auto 300px;
-width: 300px;
-height: 300px;
-text-align: center;
-float:left;
-margin: 30px;
-
-
-}
-
-.port6 a {
-display: none;
-width: 300px;
-height: 300px;
-}
-
-
-.port7 { 
-background: url(images/highground.jpg) 50% 30% no-repeat; /* 50% 50% centers image in div */
-background-size: auto 300px;
-width: 300px;
-height: 300px;
-text-align: center;
-float:left;
-margin: 30px;
-
-
-}
-
-.port7 a {
-display: none;
-width: 300px;
-height: 300px;
-}
-
-
-.port8 { 
-background: url(images/couchdom.jpg) 50% 30% no-repeat; /* 50% 50% centers image in div */
-background-size: 300px auto ;
-width: 300px;
-height: 300px;
-text-align: center;
-float:left;
-margin: 30px;
-
-}
-
-.port8 a {
-display: none;
-width: 300px;
-height: 300px;
-}
-
-.port9 { 
-background: url(images/artshowpc.jpg) 50% 30% no-repeat; /* 50% 50% centers image in div */
-background-size: 300px auto ;
-width: 300px;
-height: 300px;
-text-align: center;
-float:left;
-margin: 30px;
-
-}
-
-.port9 a {
-display: none;
-width: 300px;
-height: 300px;
-}
-
-.portgroup {
-  
-  /*display: block;*/
-
-
-}
 
 .btn-group{
  
@@ -555,6 +399,154 @@ height: 300px;
  
 }
 
+
+h2 {
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.card-img-overlay {
+  /*padding-top: 38%*/
+  
+}
+
+
+#putnam:hover {
+  opacity: 0.7
+}
+#putnam:hover #putnamtxt{
+  display: inline;
+  opacity: 1;
+}
+#putnamtxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+
+#dizzy:hover {
+  opacity: 0.7
+}
+#dizzy:hover #dizzytxt{
+  display: inline;
+  opacity: 1;
+}
+#dizzytxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+   margin-bottom: 35%;
+}
+
+#stemtv:hover {
+  opacity: 0.7
+}
+#stemtv:hover #stemtvtxt{
+  display: inline;
+  opacity: 1;
+}
+#stemtvtxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#deadmans:hover {
+  opacity: 0.7
+}
+#deadmans:hover #deadmanstxt{
+  display: inline;
+  opacity: 1;
+}
+#deadmanstxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#dancer:hover {
+  opacity: 0.7
+}
+#dancer:hover #dancertxt{
+  display: inline;
+  opacity: 1;
+}
+#dancertxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#throwaway:hover {
+  opacity: 0.7
+}
+#throwaway:hover #throwawaytxt{
+  display: inline;
+  opacity: 1;
+}
+#throwawaytxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#highground:hover {
+  opacity: 0.7
+}
+#highground:hover #highgroundtxt{
+  display: inline;
+  opacity: 1;
+}
+#highgroundtxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#faraway:hover {
+  opacity: 0.7
+}
+#faraway:hover #farawaytxt{
+  display: inline;
+  opacity: 1;
+}
+#farawaytxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#artshowpc:hover {
+  opacity: 0.7
+}
+#artshowpc:hover #artshowpctxt{
+  display: inline;
+  opacity: 1;
+}
+#artshowpctxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
 
 
 
