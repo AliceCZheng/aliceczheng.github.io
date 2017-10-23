@@ -561,16 +561,40 @@ h2 {
   margin-bottom: 900px;
 }
 
+#popup {
+
+}
+
+h4 {
+  margin-top: 100%;
+  float: left;
+}
+
+.bd-example-modal-lg-putnam {
+  margin: auto;
+}
+/*
+#lightbox {
+  margin-top: 50%;
+  margin-bottom: 50%;
+}
+*/
+.modal-dialog.modal-lg {
+  margin-top: 20%;
+}
+
+#putnamlb {
+  margin-bottom: 5%;
+}
 
 
 
-
-
-
-
-
-
-
+#lightboxheader {
+  margin-top:5%;
+}
+#lightboxtxt {
+  margin-top:5%;
+}
 
 
 
