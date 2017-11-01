@@ -491,6 +491,25 @@ h2 {
     margin-bottom: 35%;
 }
 
+#processing:hover {
+  opacity: 0.7
+}
+#processing:hover #processingtxt{
+  display: inline;
+  opacity: 1;
+}
+#processingtxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#processingvid {
+  margin-top:20%;
+}
+
 #throwaway:hover {
   opacity: 0.7
 }
@@ -499,6 +518,38 @@ h2 {
   opacity: 1;
 }
 #throwawaytxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#vote:hover {
+  opacity: 0.7
+}
+#vote:hover #votetxt{
+  display: inline;
+  opacity: 1;
+}
+#votetxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+
+  float: left;
+}
+
+#splash:hover {
+  opacity: 0.7
+}
+#splash:hover #splashtxt{
+  display: inline;
+  opacity: 1;
+}
+#splashtxt{
   margin-top: 42%;
     opacity: 0;
     background-color: #34282C;

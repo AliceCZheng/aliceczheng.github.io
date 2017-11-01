@@ -51,16 +51,16 @@
     <div class="btn-group" >
     <h2 align="center" >Projects</h2>
         <div >
-          <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paintings
+          <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Programming Projects
           </button>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="portfolio.html">All Projects</a>
             <a class="dropdown-item" href="graphicdesign.html">Graphic Design</a>
             <a class="dropdown-item" href="theatre.html">Technical Theatre</a>
-            <a class="dropdown-item" href="uiuxdesign.html">UI/UX Product Design</a>
-            <a class="dropdown-item" href="programming.html">Programming Projects</a>
+<!--             <a class="dropdown-item" href="uiuxdesign.html">UI/UX Product Design</a> -->
+               <a class="dropdown-item" href="programming.html">Programming Projects</a>
 <!--             <a class="dropdown-item" href="applicationdesign.html">Application Design</a> -->
-            <a class="dropdown-item" href="paintings.html">Paintings</a>
+<!--             <a class="dropdown-item" href="paintings.html">Paintings</a> -->
             <!-- <a class="dropdown-item" href="#">Ongoing Projects</a> -->
 <!--             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Separated link</a> -->
@@ -81,31 +81,37 @@
 <div class="mx-auto" style="width:100%;">
 <div id="portrow" class="mx-auto">
 
-        <div class="col-sm-4" id ="dancer" data-toggle="modal" data-target=".bd-example-modal-lg-dancer">
+        <div class="col-sm-4" id ="processing" data-toggle="modal" data-target=".bd-example-modal-lg-processing">
 
-        <img src="images/dancertn.jpg"  class="img-fluid" alt="Responsive image">
+        <img src="images/processingtn.png"  class="img-fluid" alt="Responsive image">
 
-             <center><div id ="dancertxt" class="card-img-overlay">
-                <h3  class="card-title">The Dancer</h3>
+             <center><div id ="processingtxt" class="card-img-overlay">
+                <h3  class="card-title">Colors of the Day</h3>
             </div></center>
         </div>
 
         <div id ="popup">
-        <div class="modal fade bd-example-modal-lg-dancer" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal fade bd-example-modal-lg-processing" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="col-sm-12" id="lightboxheader">
 
-                    <center><h2>The Dancer</h2></center>
+                    <center><h2>Colors of the Day</h2></center>
                 </div>
             <div class="col-sm-12"  id="putnamlb">
                 <div class="col-sm-6">
-                    <img src="images/dancer.jpg"  class="img-fluid" alt="Responsive image">
+                    <img src="images/processing.png"  class="img-fluid" alt="Responsive image">
+                    <iframe id ="processingvid" class="img-fluid" src="https://www.youtube.com/embed/9irYuQfz6Uk" frameborder="0" gesture="media" allowfullscreen></iframe>
+
                 </div>
                 <div class="col-sm-6" id="lightboxtxt">
-                    <h4>The Dancer is a oil painting made in 2015
+                    <h4>Colors of the Day explores a subset of pictures on flickr and creates a data visualization of them. This was coded using Java in Processing and use of the Flickr API.
                         <br><br>
-                    The painting focuses on the amount of movement, strength, and dynanicism of dance. The cool colors and high contrast reminds the viewer how brutal ballet can be. 
+                        A project done by many flickr users is to upload a picture everytime they see or do something that they determine. Sometimes a user will upload a picture of their view everytime they pass through a door. Other users might take a picture of every sign they see. There are even those that will take a picture of every squirrel they encounter. Done under the same hashtag, these slew of photos encompass everyday life. 
+                        <br><br>
+                        I parsed through these photos and took in the data of when they were uploaded and the RGB value of each pixel in the photos. I split the data up into sections of the day and calculated which color (Red, Green, or Blue) each photo had the most of. They are displayed through bubbles on each screen of the data visualization. When hovered over, they display a random thumbnail photo from the grouping.
+                        <br><br>
+                        I found the data from the visualization interesting as there are many correlations that are made evident. Red dominated photos are prominant because yellow light and human fleshtones create photos with more red color. During the night time, there is more indoor photos and outside photos with outside lights. During the day there is a higher ratio of green and blue photos to red photos because there are more photos outside in the daylight with nature and blue skies.
 
                     <h4>
                 </div>
@@ -115,30 +121,33 @@
     </div>
 
 </div>
-        <div class="col-sm-4" id ="throwaway" data-toggle="modal" data-target=".bd-example-modal-lg-tl">
+        <div class="col-sm-4" id ="splash" data-toggle="modal" data-target=".bd-example-modal-lg-splash">
 
-        <img src="images/throwawaytn.jpg"  class="img-fluid" alt="Responsive image">
+        <img src="images/splashtn.png"  class="img-fluid" alt="Responsive image">
 
-             <center><div id ="throwawaytxt" class="card-img-overlay">
-                <h3  class="card-title">Throwaway Lines (Pt.1)</h3>
+             <center><div id ="splashtxt" class="card-img-overlay">
+                <h3  class="card-title">Splash Application</h3>
             </div></center>
         </div>
         <div id ="popup">
-        <div class="modal fade bd-example-modal-lg-tl" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal fade bd-example-modal-lg-splash" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="col-sm-12" id="lightboxheader">
 
-                    <center><h2>Throwaway Lines (Pt.1)</h2></center>
+                    <center><h2>Splash Application</h2></center>
                 </div>
             <div class="col-sm-12"  id="putnamlb">
                 <div class="col-sm-6">
-                    <img src="images/throwaway.jpg"  class="img-fluid" alt="Responsive image">
+                    <img src="images/splash1.png"  class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="col-sm-6">
+                    <img src="images/splash2.png"  class="img-fluid" alt="Responsive image">
                 </div>
                 <div class="col-sm-6" id="lightboxtxt">
-                    <h4>Throwaway Lines is part one of a series made with watercolor paints. 
+                    <h4>Splash is an application I made with a group of peers. It sources data from the community to locate where clean drinkable water is. In America there are areas where clean water is not accessible yet access to technology and data is. This project was made in Android Studio and also made into a webapp.
                         <br><br>
-                    This series highlights how passing words or thoughts can be meaningful. They often reveal much about the people that say them.
+                    https://nuts-and-bolts.herokuapp.com/
 
                     <h4>
                 </div>
