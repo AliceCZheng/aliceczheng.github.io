@@ -2,10 +2,19 @@ body {
 /*  font-family: 'Noxie One', sans-serif;*/
   /*font-family: 'Bitter', serif;*/
   font-family: 'Raleway', sans-serif;
-  background-image: url("images/bck.jpg");
+/*  background-image: url("images/bck.jpg");
   background-size: 100%;
-  font-weight: 300;
+  font-weight: 300;*/
+  background: url(images/bck.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
+}
+
+html { 
+  
 }
 
 body::after{
