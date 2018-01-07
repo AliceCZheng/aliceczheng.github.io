@@ -14,6 +14,10 @@ function mouseOver4() {
 	document.getElementById("pls").style.backgroundImage = "url('images/cupgif.gif')";
 }
 
+function mouseOver5() {
+	document.getElementById("pls").style.backgroundImage = "url('images/foxgif.gif')";
+}
+
 function mouseOut() {
 	document.getElementById("pls").style.backgroundImage = "url('images/website.png')";
 }

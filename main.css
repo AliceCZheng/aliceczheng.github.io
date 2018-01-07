@@ -2,14 +2,15 @@ body {
 /*  font-family: 'Noxie One', sans-serif;*/
   /*font-family: 'Bitter', serif;*/
   font-family: 'Raleway', sans-serif;
-
+  background-image: url("images/bck.jpg");
+  background-size: 100%;
   font-weight: 300;
 
 }
 
 body::after{
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-    content:url(images/lightgif.gif) url(images/cupgif.gif) url(images/typewritergif.gif) url(images/drawinggif.gif) url(images/foxgif.gif) url(images/aboutmepic.jpg) url(images/hgimagetn.jpg) url(images/throwawaytn.jpg) url(images/dancertn.jpg) url(images/deadmanspostertn.jpg) url(images/farawaytn.jpg);
+    content:url(images/lightgif.gif) url(images/bck.jpg) url(images/cupgif.gif) url(images/typewritergif.gif) url(images/drawinggif.gif) url(images/foxgif.gif) url(images/aboutmepic.jpg) url(images/hgimagetn.jpg) url(images/throwawaytn.jpg) url(images/dancertn.jpg) url(images/deadmanspostertn.jpg) url(images/farawaytn.jpg);
 }
 
 header {
