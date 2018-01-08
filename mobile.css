@@ -41,7 +41,7 @@ header {
 .nav-b {
 
   color: #A3A3A3;
-  float:left;
+/*  float:left;*/
 
 }
 .nav-b:hover {
@@ -67,11 +67,11 @@ header {
 }
 
 #about {
-  margin-right: 10%;
+/*  margin-right: 10%;
   margin-left: 370%;
   margin-top: 0%;
-  margin-bottom: 10%;
-  border-color: red;
+  margin-bottom: 10%;*/
+/*  border-color: red;*/
 /*  position: fixed;*/
 /*  float:left;*/
 }
@@ -92,10 +92,10 @@ header {
 }
 
 #contact {
-  margin-right: 35px;
+/*  margin-right: 35px;
   margin-left: 30px;
   margin-top: 200px;
-  margin-bottom: 50px;
+  margin-bottom: 50px;*/
   
 }
 .workplease {
@@ -278,10 +278,9 @@ img{
   font-size: 2vw;
   margin-top: 250px;
 
-  
-
 
 }
+
 
 .resumet {
   line-height: 20px;
