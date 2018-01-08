@@ -17,6 +17,19 @@ html {
   
 }
 
+.portfoliobutton {
+
+  background-image: url(images/githirstytn.jpg);
+  background-repeat: no-repeat;
+  /*background-size: 765.5px 291.5px;*/
+  background-size: 100%;
+  vertical-align: middle;
+  width: 60%;
+  height: 150px;
+  margin-top: 2%;
+
+}
+
 body::after{
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
     content:url(images/lightgif.gif) url(images/bck.jpg) url(images/cupgif.gif) url(images/typewritergif.gif) url(images/drawinggif.gif) url(images/foxgif.gif) url(images/aboutmepic.jpg) url(images/hgimagetn.jpg) url(images/throwawaytn.jpg) url(images/dancertn.jpg) url(images/deadmanspostertn.jpg) url(images/dizzy.jpg);
@@ -196,16 +209,22 @@ header {
 #navigationheader {
  
   background-image: url(images/websitenav.png);
-  background-size:  762.24px 161px;
 
 
-  width: 762.24px;
   height: 161px;
   font-size: 12px;
 
 
  
   position: relative;
+
+  margin-top: 10%;
+  background-repeat: no-repeat;
+  /*background-size: 765.5px 291.5px;*/
+  background-size: 100%;
+  vertical-align: middle;
+  width: 80%;
+
 
 
 }
@@ -266,6 +285,11 @@ header {
    
     transform: translate(-50%, -50%);
 
+}
+
+.portbar {
+  width:80%;
+  background-color: transparent;
 }
 
 #portfolion {
@@ -367,7 +391,7 @@ img{
   position: relative;
   text-align: center;
   font-size: 2vw;
-  margin-top: 200px;
+  margin-top: 240px;
 
 }
 
