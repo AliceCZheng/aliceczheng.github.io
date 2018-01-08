@@ -71,6 +71,7 @@ header {
   margin-left: 370%;
   margin-top: 0%;
   margin-bottom: 10%;
+  border-color: red;
 /*  position: fixed;*/
 /*  float:left;*/
 }
@@ -117,9 +118,11 @@ header {
   background-size: 100%;
   vertical-align: middle;
   width: 70%;
+  height: 291.5px;
+
 
   
-  position: relative;
+/*  position: fixed;*/
   z-index: 5;
   font-size: 15px;
 

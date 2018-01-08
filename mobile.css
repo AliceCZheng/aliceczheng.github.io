@@ -23,7 +23,7 @@ body::after{
 }
 
 header {
-  padding-top: 20px;
+/*  padding-top: 20px;*/
   /**/
 }
 
@@ -36,7 +36,7 @@ header {
 .row {
   /*margin-top: 199px;
   margin-bottom: 71.5px;*/
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 .nav-b {
 
@@ -56,6 +56,7 @@ header {
   /*width:200px;
   height:291.5px;*/
   float:left;
+  position: fixed;
 }
 
 #AZ {
@@ -66,10 +67,13 @@ header {
 }
 
 #about {
-  margin-right: 55px;
-  margin-left: 40px;
-  margin-top: 200px;
-  margin-bottom: 50px;
+  margin-right: 10%;
+  margin-left: 370%;
+  margin-top: 0%;
+  margin-bottom: 10%;
+  border-color: red;
+/*  position: fixed;*/
+/*  float:left;*/
 }
 
 #portfolio {
@@ -107,15 +111,22 @@ header {
 }
 
 #pls {
-  position: relative;
+
   background-image: url(images/website.png);
+  background-repeat: no-repeat;
+  /*background-size: 765.5px 291.5px;*/
   background-size: 100%;
   vertical-align: middle;
-  width: 765.5px;
+  width: 70%;
   height: 291.5px;
 
+
+  
+/*  position: fixed;*/
   z-index: 5;
   font-size: 15px;
+
+
 
 
 
