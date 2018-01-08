@@ -39,8 +39,10 @@ header {
   font-size: 1.5rem;
 }
 .nav-b {
-
+  margin-top: 10px;
   color: #A3A3A3;
+  background-color: #ddd;
+  position: relative;
 /*  float:left;*/
 
 }
@@ -48,6 +50,7 @@ header {
   color: #404040;
   
   text-decoration: none;
+  background-color: #ddd;
 
 }
 
@@ -55,40 +58,77 @@ header {
   /*border: 3px solid grey;;*/
   /*width:200px;
   height:291.5px;*/
-  float:left;
-  position: fixed;
+
 }
 
-#AZ {
-  margin-right: 70px;
-  margin-left: 140px;
-  margin-top: 200px;
-  margin-bottom: 50px;
+#az {
+  /*background-color: #ddd;*/
+    position: relative;
+    margin-left: 4%;
+    height:400px;
+    width: 15%;
+    position: fixed;
+    padding: 2em;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #about {
+  
+ /* background-color: #ddd;*/
+    position: relative;
+    margin-left: 4%;
+    height:400px;
+    width: 10%;
+    position: fixed;
+    padding: 2em;
+    left: 37%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 /*  margin-right: 10%;
-  margin-left: 370%;
+  margin-left: 20%;
+  padding-left: 20%;
   margin-top: 0%;
-  margin-bottom: 10%;*/
-/*  border-color: red;*/
-/*  position: fixed;*/
-/*  float:left;*/
+  margin-bottom: 10%;
+  border-color: red;
+  background-size: 10%;
+  position: fixed;
+  float:left;*/
+/*  margin-top: 4%;
+  margin-left: 15em;
+  position: relative;*/
+
+
+
 }
 
 #portfolio {
-  margin-right: 23px;
-  margin-left: 5px;
-  margin-top: 200px;
-  margin-bottom: 50px;
+
+  /*background-color: #ddd;*/
+    position: relative;
+    margin-left: 4%;
+    height:400px;
+    width: 8%;
+    position: fixed;
+    padding: 2em;
+    left: 45%;
+    top: 25%;
+    transform: translate(-50%, -50%);
   
 }
 
 #resume {
-  margin-right: 75px;
-  margin-left: 60px;
-  margin-top: 200px;
-  margin-bottom: 50px;
+/*  background-color: red;*/
+    position: relative;
+    margin-left: 8%;
+    height:400px;
+    width: 14%;
+    position: fixed;
+    padding: 2em;
+    left: 52%;
+    top: 25%;
+    transform: translate(-50%, -50%);
 }
 
 #contact {
@@ -96,11 +136,28 @@ header {
   margin-left: 30px;
   margin-top: 200px;
   margin-bottom: 50px;*/
+/*    background-color: #ddd;*/
+    position: relative;
+    margin-left: 19%;
+    width:12%;
+    height:400px;
+    position: fixed;
+    padding: 2em;
+    left: 53%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*height: 70%;*/
+/*    padding: 2em;*/
+/*    left: 50%;
+    top: 50%;*/
+/*    transform: translate(-50%, -50%);*/
   
 }
 .workplease {
   margin-top: 20;
   margin-bottom: 20;
+ /* background-color:#ddd;*/
+
 }
 
 
@@ -120,16 +177,17 @@ header {
   width: 70%;
   height: 291.5px;
 
+}
 
-  
-/*  position: fixed;*/
-  z-index: 5;
-  font-size: 15px;
+.words {
 
-
-
-
-
+  background-image: url(images/titlecard.png);
+  background-repeat: no-repeat;
+  /*background-size: 765.5px 291.5px;*/
+  background-size: 100%;
+  vertical-align: middle;
+  width: 100%;
+  height: 291.5px;
 
 }
 
@@ -276,11 +334,19 @@ img{
   position: relative;
   text-align: center;
   font-size: 2vw;
-  margin-top: 250px;
-
+  margin-top: 260px;
 
 }
 
+.name2 {
+
+  position: relat;
+  text-align: center;
+  font-size: 2vw;
+  margin-top: -370px;
+
+
+}
 
 .resumet {
   line-height: 20px;
