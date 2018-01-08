@@ -17,16 +17,23 @@ html {
   
 }
 
-.portfoliobutton {
-
+#githirsty {
   background-image: url(images/githirstytn.jpg);
+}
+#votely {
+  background-image: url(images/votely.jpg);
+}
+
+.portfoliobutton {
+  border:15px solid white;
+
   background-repeat: no-repeat;
   /*background-size: 765.5px 291.5px;*/
   background-size: 100%;
   vertical-align: middle;
-  width: 60%;
-  height: 150px;
-  margin-top: 2%;
+  width: 70%;
+  height: 200px;
+  margin-top: 4%;
 
 }
 
