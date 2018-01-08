@@ -36,7 +36,7 @@ header {
 .row {
   /*margin-top: 199px;
   margin-bottom: 71.5px;*/
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 .nav-b {
 
@@ -119,7 +119,7 @@ header {
   width: 70%;
 
   
-
+  position: relative;
   z-index: 5;
   font-size: 15px;
 
