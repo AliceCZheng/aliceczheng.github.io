@@ -1,0 +1,717 @@
+body {
+/*  font-family: 'Noxie One', sans-serif;*/
+  /*font-family: 'Bitter', serif;*/
+  font-family: 'Raleway', sans-serif;
+/*  background-image: url("images/bck.jpg");
+  background-size: 100%;
+  font-weight: 300;*/
+  background: url(images/bck2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+html { 
+  
+}
+
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content:url(images/lightgif.gif) url(images/bck.jpg) url(images/cupgif.gif) url(images/typewritergif.gif) url(images/drawinggif.gif) url(images/foxgif.gif) url(images/aboutmepic.jpg) url(images/hgimagetn.jpg) url(images/throwawaytn.jpg) url(images/dancertn.jpg) url(images/deadmanspostertn.jpg) url(images/dizzy.jpg);
+}
+
+header {
+  padding-top: 20px;
+  /**/
+}
+
+
+.container {
+  /*border-bottom: 2px solid #05A8AA;*/
+}
+
+
+.row {
+  /*margin-top: 199px;
+  margin-bottom: 71.5px;*/
+  font-size: 15px;
+}
+.nav-b {
+
+  color: #A3A3A3;
+  float:left;
+
+}
+.nav-b:hover {
+  color: #404040;
+  
+  text-decoration: none;
+
+}
+
+.workplease{
+  /*border: 3px solid grey;;*/
+  /*width:200px;
+  height:291.5px;*/
+  float:left;
+}
+
+#AZ {
+  margin-right: 70px;
+  margin-left: 140px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+#about {
+  margin-right: 55px;
+  margin-left: 40px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+#portfolio {
+  margin-right: 23px;
+  margin-left: 5px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  
+}
+
+#resume {
+  margin-right: 75px;
+  margin-left: 60px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+#contact {
+  margin-right: 35px;
+  margin-left: 30px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  
+}
+.workplease {
+  margin-top: 20;
+  margin-bottom: 20;
+}
+
+
+
+.bg {
+  background-color: #FFF;
+  font-family: 'Raleway', sans-serif;
+}
+
+#pls {
+  position: relative;
+  background-image: url(images/website.png);
+  background-size: 765.5px 291.5px;
+  vertical-align: middle;
+  width: 765.5px;
+  height: 291.5px;
+  
+  
+  z-index: 5;
+  font-size: 15px;
+
+
+
+
+}
+
+
+
+#navigationheader {
+ 
+  background-image: url(images/websitenav.png);
+  background-size:  762.24px 161px;
+
+
+  width: 762.24px;
+  height: 161px;
+  font-size: 12px;
+
+
+ 
+  position: relative;
+
+
+}
+/*
+.nav:hover {
+  display: none;
+}
+
+#a:hover ~ #pls{
+  background-color: red;
+}
+
+
+
+.fox {
+  margin-left: 200px;
+
+}
+
+.test {
+  /*border: 3px solid black;*/
+
+.nav {
+  position: relative;
+}
+
+.a {
+  color: #404040;
+}
+
+
+
+#AZn {
+  margin-right: 115px;
+  margin-left: 55px;
+  margin-top: 57px;
+  margin-bottom: 5px;
+  font-size: 50px;
+  color: #404040;
+
+}
+
+#aboutn {
+  margin-right: 25px;
+  margin-left: 30px;
+  margin-top: 110px;
+  margin-bottom: 5px;
+
+}
+
+#portfolion {
+  margin-right: 5px;
+  margin-left: 0px;
+  margin-top: 110px;
+  margin-bottom: 5px;
+  
+}
+
+#resumen {
+  margin-right: 25px;
+  margin-left: 27px;
+  margin-top: 110px;
+  margin-bottom: 5px;
+}
+
+#contactn {
+  margin-right: 10px;
+  margin-left: 17px;
+  margin-top: 110px;
+  margin-bottom: 5px;
+  
+}
+
+#dl {
+  color: #91C2C6;
+  text-decoration: none;
+  font-size: 15px;
+
+}
+
+#dl:hover {
+  color: #404040;
+}
+
+#title {
+  margin-top: 100px;
+  font-size: 70px;
+  margin-left: 100px;
+
+}
+
+
+#resumel {
+  text-align: right;
+  float: left;
+  margin: 0px;
+
+}
+
+#resumeright {
+  text-align: left;
+  float:left;
+  margin-top: 0px
+}
+
+img{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+
+}
+
+#abouttext {
+  margin-top: 40px;
+  max-width: 750px;
+  text-align: left;
+  text-indent: 20px;
+  margin-bottom: 100px;
+  font-size: 20px;
+
+}
+
+.name {
+
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 250px;
+
+  
+
+
+}
+
+.resumet {
+  line-height: 20px;
+}
+
+#resumesmall {
+  line-height: 15px;
+}
+
+#line {
+  border-bottom: solid #A4A4A4;
+  border-width: thin;
+  width: 600px;
+}
+
+#edu {
+  margin-bottom: 70px;
+}
+
+#skills {
+  margin-bottom: 90px;
+}
+
+#jobone {
+  margin-top: 42px;
+  margin-bottom: 5px;
+}
+
+.date {
+  color: #9A9A9A;
+}
+
+#ex {
+  margin-bottom: 0px;
+}
+
+#june {
+  margin-bottom: 62px;
+}
+
+#jobtwo {
+  margin-top:15px;
+}
+#jan {
+  margin-bottom: 120px;
+}
+
+#sg {
+  margin-top: 80px;
+}
+
+#sept {
+  margin-bottom: 110px;
+}
+
+#dt {
+  margin-top: 70px;
+
+}
+
+#text {
+  margin-bottom: 100px
+}
+
+#contactinfo {
+  margin-top: 10px;
+  text-align: center;
+  line-height: 10px;
+}
+
+
+#portspace {
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+}
+
+#portrow {
+  margin-left: 10%;
+  margin-right: 10%;
+  max-width: 1000px;
+
+}
+
+
+.img-fluid {
+
+
+}
+
+#putnam {
+
+
+
+}
+
+
+
+#port { 
+background: url(images/Putnam.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
+background-size: 100%;
+width: 300px;
+height: 300px;
+text-align: center;
+/*float:left;*/
+margin: 30px;
+
+
+
+}
+
+#port a {
+display: none;
+width: 300px;
+height: 300px;
+
+}
+
+#port:hover { 
+    opacity: 0.5;
+ }
+ #port:hover  #posters { 
+    opacity: 1;
+    text-align: center;
+    
+ }
+
+
+.btn-group{
+ 
+
+  margin-left: 42%;
+  margin-right: 50%;
+ 
+}
+
+
+h2 {
+  margin-left: 10%;
+  margin-right: 5%;
+
+}
+
+.card-img-overlay {
+  /*padding-top: 38%*/
+  
+}
+
+
+#putnam:hover {
+  opacity: 0.7
+}
+#putnam:hover #putnamtxt{
+  display: inline;
+  opacity: 1;
+}
+#putnamtxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+
+#dizzy:hover {
+  opacity: 0.7
+}
+#dizzy:hover #dizzytxt{
+  display: inline;
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+}
+#dizzytxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+   margin-bottom: 35%;
+}
+
+#stemtv:hover {
+  opacity: 0.7
+}
+#stemtv:hover #stemtvtxt{
+  display: inline;
+  opacity: 1;
+}
+#stemtvtxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#deadmans:hover {
+  opacity: 0.7
+}
+#deadmans:hover #deadmanstxt{
+  display: inline;
+  opacity: 1;
+}
+#deadmanstxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#dancer:hover {
+  opacity: 0.7
+}
+#dancer:hover #dancertxt{
+  display: inline;
+  opacity: 1;
+}
+#dancertxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#processing:hover {
+  opacity: 0.7
+}
+#processing:hover #processingtxt{
+  display: inline;
+  opacity: 1;
+}
+#processingtxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#processingvid {
+  margin-top:20%;
+}
+
+#throwaway:hover {
+  opacity: 0.7
+}
+#throwaway:hover #throwawaytxt{
+  display: inline;
+  opacity: 1;
+}
+#throwawaytxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#vote:hover {
+  opacity: 0.7
+}
+#vote:hover #votetxt{
+  display: inline;
+  opacity: 1;
+}
+#votetxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+
+  float: left;
+}
+
+#splash:hover {
+  opacity: 0.7
+}
+#splash:hover #splashtxt{
+  display: inline;
+  opacity: 1;
+}
+#splashtxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#highground:hover {
+  opacity: 0.7
+}
+#highground:hover #highgroundtxt{
+  display: inline;
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+}
+#highgroundtxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+
+}
+
+#highgroundl:hover {
+  opacity: 0.7
+}
+#highgroundl:hover #highgroundtxtl{
+  display: inline;
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+}
+#highgroundtxtl{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+
+}
+
+#faraway:hover {
+  opacity: 0.7
+}
+#faraway:hover #farawaytxt{
+  display: inline;
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+}
+#farawaytxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+
+#faraways:hover {
+  opacity: 0.7
+}
+#faraways:hover #farawaytxt{
+  display: inline;
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+}
+#farawaytxts{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#artshowpc:hover {
+  opacity: 0.7
+}
+#artshowpc:hover #artshowpctxt{
+  display: inline;
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+}
+#artshowpctxt{
+  margin-top: 42%;
+    opacity: 0;
+    background-color: #34282C;
+    color: white;
+    margin-bottom: 35%;
+}
+
+#page {
+  margin-bottom: 900px;
+}
+
+#popup {
+
+}
+
+h4 {
+  margin-top: 100%;
+  float: left;
+}
+
+.bd-example-modal-lg-putnam {
+  margin: auto;
+}
+/*
+#lightbox {
+  margin-top: 50%;
+  margin-bottom: 50%;
+}
+*/
+.modal-dialog.modal-lg {
+  margin-top: 20%;
+}
+
+#putnamlb {
+  margin-bottom: 5%;
+}
+
+
+
+#lightboxheader {
+  margin-top:5%;
+}
+#lightboxtxt {
+  margin-top:5%;
+}
+
+#abouttext {
+
+  margin-left: 2%;
+  float:left;
+}
+
+#aboutmepic {
+  margin: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
