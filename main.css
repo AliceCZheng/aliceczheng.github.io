@@ -24,6 +24,10 @@ html {
   background-image: url(images/votely.jpg);
 }
 
+#viewbook {
+  background-image: url(images/iactn.jpg);
+}
+
 .portfoliobutton {
   border:15px solid white;
 
@@ -31,9 +35,9 @@ html {
   /*background-size: 765.5px 291.5px;*/
   background-size: 100%;
   vertical-align: middle;
-  width: 70%;
-  height: 200px;
-  margin-top: 4%;
+  width: 60%;
+  height: 150px;
+  margin-top: 0%;
 
 }
 
@@ -66,6 +70,13 @@ header {
   float:left;
 
 }
+
+.wholeport {
+  overflow: scroll;
+  width:100%;
+  height:500px;
+}
+
 .nav-b:hover {
   color: #404040;
   
@@ -217,20 +228,20 @@ header {
  
   background-image: url(images/websitenav.png);
 
-
-  height: 161px;
+  height:150px;
   font-size: 12px;
 
 
  
   position: relative;
 
-  margin-top: 10%;
+  margin-top: 2%;
   background-repeat: no-repeat;
   /*background-size: 765.5px 291.5px;*/
   background-size: 100%;
   vertical-align: middle;
   width: 80%;
+
 
 
 
