@@ -1,7 +1,7 @@
 body {
 /*  font-family: 'Noxie One', sans-serif;*/
   /*font-family: 'Bitter', serif;*/
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Sans Pro Light', sans-serif;
 /*  background-image: url("images/bck.jpg");
   background-size: 100%;
   font-weight: 300;*/
@@ -202,7 +202,7 @@ header {
 
 .bg {
   background-color: #FFF;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #pls {
@@ -413,6 +413,7 @@ img{
 
 .name {
 
+      font-family: 'Source Sans Pro', sans-serif;
   position: relative;
   text-align: center;
   font-size: 2vw;
