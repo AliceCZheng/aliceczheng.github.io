@@ -1,37 +1,20 @@
+var randomCodeArray = [[1,2,3],[1,2,4],[1,3,2],[1,3,4],[1,4,2],[1,4,3],[2,1,3],[2,1,4],[2,3,1],[2,3,4],[2,4,1],[2,4,3],[3,1,2],[3,1,4],[3,2,1],[3,2,4],[3,4,1],[3,4,2],[4,1,2],[4,1,3],[4,2,1],[4,2,3],[4,3,1],[4,3,2]];
+var numCodes = 24;
+var wordArray = [];
 
-function mouseOver() {
-	document.getElementById("pls").style.backgroundImage = "url('images/lightgif.gif')";
+
+
+function teamName() {  
+    var teamNameInput = document.getElementById("team-name-input");
+    var teamName = document.getElementById("team-name");
+    teamName.innerHTML = teamNameInput.value;
 }
 
-function mouseOver2() {
-	document.getElementById("pls").style.backgroundImage = "url('images/drawinggif.gif')";
-}
-function mouseOver3() {
-	document.getElementById("pls").style.backgroundImage = "url('images/typewritergif.gif')";
-}
-
-function mouseOver4() {
-	document.getElementById("pls").style.backgroundImage = "url('images/cupgif.gif')";
-}
-
-function mouseOver5() {
-	document.getElementById("pls").style.backgroundImage = "url('images/foxgif.gif')";
-}
-
-function mouseOut() {
-	document.getElementById("pls").style.backgroundImage = "url('images/website.png')";
+function roomCombo() {  
+    var roomComboInput = document.getElementById("room-combo-input");
+    var roomCombo = document.getElementById("room-combo");
+    roomCombo.innerHTML = roomComboInput.value;
 }
 
 
 
-
-
-// function mouseOvertxt() {
-// 	document.getElementById("putnam").style.opacity = "0.6";
-// 	document.getElementById("putnamtxt").style.opacity = "1";
-// }
-
-// function mouseOuttxt() {
-// 	document.getElementById("putnam").style.opacity = "1";
-// 	document.getElementById("putnamtxt").style.opacity = "0";
-// }

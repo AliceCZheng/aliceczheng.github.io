@@ -9,87 +9,66 @@
 
     <title>Alice Zheng</title>
 <!--     <link rel="stylesheet" type="text/css" href="main.css"> -->
-<link rel="stylesheet" type="text/css" href="mobile.css" media="screen, handheld" />
-<link rel="stylesheet" type="text/css" href="main.css" media="screen  and (min-width: 40.5em)" />
+    <link rel="stylesheet" type="text/css" href="mobile.css" media="screen, handheld" />
+    <link rel="stylesheet" type="text/css" href="main.css" media="screen  and (min-width: 40.5em)" />
+    <script src="https://d3js.org/d3.v4.min.js"></script>   
+    <script src="main.js" type="text/javascript"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900"/>
+
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
     <link rel="icon" type="image/png" href="images/icon.png" />
-
-    <script src="main.js" type="text/javascript"></script>
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
   <body class="bg" >
-    <div id="background">
-    
-    <header class="container">
-        <!-- <img src="images/desertfox.png"/> -->
+      
+    <div id="background" >
+        <header class="container">
+            <div class="name" class="mx-auto" style="text-align: center"><h1 >Decryta.</h1></div>
+        </header>
+    </div>
+      
+      
+    <div style="width: 400px;" class="container" id="mainbox">  
+        <!--room code input-->
         
-        <div class="name" class="mx-auto"><p >Alice Zheng.</p></div>
-     
-        <div class ="col-sm-12" class="align-middle">
-        <div align="center" id="navigation" class="nav">
+        <div class="input-group mb-3">
+            <h3>Room Combo: <span id="room-combo"></span></h3>
+            <p>(Choose any combination of letters and numbers, make sure your game-mates all insert the same combo)</p>
+
            
+          <input type="text" class="form-control" placeholder="ex. 5WJ4" aria-label="room combo" aria-describedby="button-addon1" id="room-combo-input">
+          <div class="input-group-append">
+            <button class="btn btn-warning" onclick="roomCombo()" type="button" id="button-room-combo">Confirm</button>
+          </div>
         
-        <!-- <div class="buttons" width= "765.5" height="291.5">
-
-            <a href="index.html">
-                <div class="fox" width= "200" height="291.5"></div>moe
-            </a>
-            
-        </div> -->
-        <!-- <div class="buttons" width= "765.5" height="291.5">
-         </div>   -->  
-        
-            <nav class="mx-auto" id="pls" id="nav-bg" class="modal-dialog-centered">
-                <div class="words">
-                </div>
-                <div class="buttons"  width= "765.5" height="291.5"
-                >
-                </div>
-                <div class="workplease" id="az" onmouseover="mouseOver5()" onmouseout="mouseOut()" ></div>
-                <div class="workplease" id="a" onmouseover="mouseOver()" onmouseout="mouseOut()"><a class="nav-b"  href="about.html"><p id="about"></p></a></div>
-                <div class="workplease" id="p" onmouseover="mouseOver2()" onmouseout="mouseOut()"><a class="nav-b"  href="portfolio.html"><p id="portfolio"></p></a></div>
-                <div class="workplease" id="r" onmouseover="mouseOver3()" onmouseout="mouseOut()"><a class="nav-b"  href="http://www.tinydesertfox.com/documents/azheng_resume.pdf"><p  id="resume"></p></a></div>
-                <div class="workplease" id="c" onmouseover="mouseOver4()" onmouseout="mouseOut()">    <a class="nav-b"  href="contact.html"><p id="contact"></p></a></div>
-
-                
-            </nav>
-            <a class="nav-b" col="g" href="index.html"><p id="AZ" class="a" ></p></a>
-
-        
-
-            
-                <!-- <div class="fox" width= "200" height="291.5">
-                    <a href="index.html">Alice Zheng</a>
-                </div> -->
         </div>
+        
+        <!--team name input-->
+        <div class="input-group mb-3">
+            <h3>Team Name: <span id="team-name"></span></h3>
+            <p>(You must insert the exact same name as your teammate)</p>
+          <input type="text" class="form-control" placeholder="ex. Flippy Floopers" aria-label="team name" aria-describedby="button-addon2" id="team-name-input">
+          <div class="input-group-append">
+            <button class="btn btn-warning" onclick="teamName()" type="button" id="button-team-name">Confirm</button>
+          </div>
+        
+        </div> 
+        
+        
     </div>
+      
+      
 
-<!--     <div class ="col-sm-12"  class="mx-auto"><p >Alice Zheng.</p></div> -->
-<!--     <div class="nav-b" class="mx-auto"><p >contact</p></div> -->
-
-
-    </header>
-    </div>
-
+      
     
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
