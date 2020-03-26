@@ -46,7 +46,7 @@
            
           <input type="text" class="form-control" placeholder="ex. 5WJ4" aria-label="room combo" aria-describedby="button-addon1" id="room-combo-input">
           <div class="input-group-append">
-            <button class="btn btn-warning" onclick="roomCombo()" type="button" id="button-room-combo">Confirm</button>
+            <button class="btn btn-warning" onclick="roomCombo()"  type="button" id="button-room-combo">Confirm</button>
           </div>
         
         </div>
@@ -57,13 +57,13 @@
             <p>(You must insert the exact same name as your teammate)</p>
           <input type="text" class="form-control" placeholder="ex. Flippy Floopers" aria-label="team name" aria-describedby="button-addon2" id="team-name-input">
           <div class="input-group-append">
-            <button class="btn btn-warning" onclick="teamName()" type="button" id="button-team-name">Confirm</button>
+            <button class="btn btn-warning" onclick="teamName()"  type="button" id="button-team-name">Confirm</button>
           </div>
         
         </div> 
         <div class="modal-footer">
         
-        <button type="button" class="btn btn-light" disabled>Continue</button>
+        <button type="button" id="continue-button" class="btn btn-light" onclick="onDisplay()" disabled>Continue</button>
       </div>
         
         

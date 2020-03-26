@@ -35,10 +35,13 @@ div {
 }
 
 #mainbox {
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     padding: 4rem;
     padding-bottom: 7rem;
     background-image: url("images/Fluorescent-Gradient.jpg");
+    opacity: 1;
+
+
 }
 
 .name {
@@ -52,14 +55,16 @@ div {
     border-top: 1px solid #ffffff !important;
 }
 
-.btn btn-primary {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+
+.btn btn-warning {
+    margin-top:1000px;
 }
 
 .btn btn-light {
     text-decoration-color: gray;
 }
+
+
 
 
 
