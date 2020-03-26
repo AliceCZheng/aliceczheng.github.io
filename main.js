@@ -60,14 +60,3 @@ function onDisplay() {
 }
 
 
-
-setTimeout(function() {
-    b = a + 4;
-}, (3 * 1000));
-
-function lowerOpacity(i) {
-    document.getElementById("mainbox").style.opacity = i/100;
-}
-
-
-
