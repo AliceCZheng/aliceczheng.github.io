@@ -5,13 +5,20 @@ body {
 /*  background-image: url("images/bck.jpg");
   background-size: 100%;
   font-weight: 300;*/
-  background: url(images/bck.jpg) no-repeat center center fixed; 
+  background: url() no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-    background-color:aquamarine;
 
+
+
+}
+
+.background {
+/*
+    text-align: center;
+    align-content: center;
+*/
 }
 
 #button {
@@ -39,16 +46,76 @@ div {
     padding: 4rem;
     padding-bottom: 7rem;
     background-image: url("images/Fluorescent-Gradient.jpg");
+    
     opacity: 1;
+}
+
+#mainbox2 {
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 4rem;
+    background-image: url("images/Cold-Gradient.jpg");
+    opacity: 1;
+    width: 75%;
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*comment out - for testing only*/
+/*
+#mainbox {
+    display: none;
+    
+}
+*/
+#mainbox2 {
+    display: flex;
+
+}
 
 
+
+.word-set {
+    background: white;
+    width: 22%;
+    height: 135px;
+    border-radius: 1rem;
 }
 
 .name {
     padding-bottom: 1.5rem;
 }
 
+.word-box {
+    text-align: center;
+    width: 100%;
+    height: 120px;
+}
+
+
+
+span.word {
+   display:block;
+   width:100px;
+   line-height: 135px;
+   margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.25rem;
+  
+}
+
+
+.number {
+    text-align: center;
+    color: white;
+
+}
+
 .modal-footer {
+    display: flex;
     margin-top: 2rem;
     margin-bottom: -6.5rem;
     height: -2rem;
@@ -62,9 +129,18 @@ div {
 
 .btn btn-light {
     text-decoration-color: gray;
+    
+
 }
 
+.form {
+    padding-right: 4rem;
+    float:left;
+}
 
+.buttonside {
+    float:right;
+}
 
 
 
