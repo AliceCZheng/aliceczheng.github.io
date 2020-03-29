@@ -56,7 +56,7 @@ div {
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 4rem;
-    background-image: url("images/Cold-Gradient.jpg");
+    background: url("images/Cold-Gradient.jpg") no-repeat center center;
     opacity: 1;
     width: 75%;
     display: none;
@@ -64,54 +64,200 @@ div {
     justify-content: space-around;
 }
 
+#mainbox3 {
+/*    margin-top: 2rem;*/
+    border-radius: 1.5rem;
+
+
+    padding-bottom: 4rem;
+/*    background-image: url("images/Cold-Gradient.jpg");*/
+    opacity: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 /*comment out - for testing only*/
-/*
 #mainbox {
-    display: none;
+    display: block;
     
 }
-*/
 #mainbox2 {
     display: flex;
 
 }
 
-
+form {
+    display: inline-flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
 
 .word-set {
     background: white;
-    width: 22%;
+    width: 23%;
     height: 135px;
     border-radius: 1rem;
+}
+
+.form-set {
+    background: white;
+    width: 45%;
+    height: 400px;
+    border-radius: 1rem;
+    
+
+}
+
+.form-insides {
+    width: 50%;
+    height: 400px;
+    border-radius: 1rem;
+    margin-bottom: -3rem;
+    
+
+}
+
+.form-box {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    
+/*
+    border-top: 2px solid #00deff;
+    border-bottom:2px solid #00deff;
+    background-image: 
+        url(images/Rainbow-Gradient.jpg),
+        url(images/Rainbow-Gradient.jpg)
+    ;
+    background-size:4px 100%;
+    background-position:0 0, 100% 0;
+*/
+    background-image: url(images/Rainbow-Gradient.jpg);
+    background-size: 100%;
+    background-repeat:no-repeat;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.form-column {
+    text-align: left;
+    width: 100%;
+    height: 317px;
+    margin-top: 0px;
+    
+    border-top: 2px solid #ffffff;
+    border-bottom:2px solid #ffffff;
+/*
+    background-image: 
+        url(images/Rainbow-Gradient.jpg),
+        url(images/Rainbow-Gradient.jpg)
+    ;
+    background-size:1px 100%;
+    background-position:0 0, 100% 0;
+*/
+    background: rgba(255,255,255,0.3);
+
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height:25px;
+}
+
+#inputClue {
+    width: 100%;
+    background-color: transparent;
+    border-style: none;
+    border:none;
+    border-bottom: 1.5px solid white;
+    border-right: 1.5px solid white;
+/*    border-radius: 0px;*/
+    
+   height: 25px;
+}
+#inputClueBox {
+    width: 70%;
+    
+}
+
+#check{width: 25%;
+text-align: center;}
+#question {width: 25%; text-align: center;}
+#wordclue {width: 70%; text-align: center;}
+#inputCodeBox {
+    width: 25%;
+    text-align: center;
+    background-color: white;
+    
+}
+#inputCode {
+    width: 100%;
+    border-style: none;
+    border-bottom: 1.5px solid white;
+    border-right: 1.5px solid white;
+    border-radius: 0px;
+    text-align: center;
+
+    height: 25px;
+
+}
+#checkBox{
+    width: 25%;
+
+    text-align: center;
+    padding-top: 2px;
+    border-right: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+    height: 25px;
+}
+.form-control {
+    
+}
+
+.columnlabel{
+    text-align: left;
+    color: dimgrey;
+    margin-bottom: -1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
 }
 
 .name {
     padding-bottom: 1.5rem;
 }
-
 .word-box {
     text-align: center;
     width: 100%;
     height: 120px;
 }
-
-
-
 span.word {
    display:block;
    width:100px;
    line-height: 135px;
    margin: 0 auto;
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: .5rem;
   
 }
-
-
 .number {
     text-align: center;
     color: white;
+}
 
+.teamname1, .teamname2 {
+    text-align: left;
+    color: black;
+    padding-left: 1rem;
+    margin-top: -5px;
 }
 
 .modal-footer {
@@ -121,27 +267,28 @@ span.word {
     height: -2rem;
     border-top: 1px solid #ffffff !important;
 }
-
-
 .btn btn-warning {
     margin-top:1000px;
 }
-
 .btn btn-light {
     text-decoration-color: gray;
     
 
 }
-
-.form {
-    padding-right: 4rem;
-    float:left;
-}
-
 .buttonside {
     float:right;
 }
 
+/*
+#round1b, #round2b, #round3b  {
+    margin-bottom:10px;
+}
+*/
+
+#gap {
+    height:5px;
+    background-color:white;
+}
 
 
 
