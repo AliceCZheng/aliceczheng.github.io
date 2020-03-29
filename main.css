@@ -171,6 +171,10 @@ form {
     height:25px;
 }
 
+#round1 {
+    background: rgba(255,255,255,0.8);
+}
+
 #inputClue {
     width: 100%;
     background-color: transparent;
@@ -188,8 +192,9 @@ form {
 }
 
 #check{width: 25%;
-text-align: center;}
-#question {width: 25%; text-align: center;}
+text-align: center;
+margin-top: 3px;}
+#question {width: 25%; text-align: center; margin-top: 3px;}
 #wordclue {width: 70%; text-align: center;}
 #inputCodeBox {
     width: 25%;
@@ -231,6 +236,11 @@ text-align: center;}
     
 }
 
+#xicon, #checkicon {
+    margin-top: 30px;
+}
+
+
 .name {
     padding-bottom: 1.5rem;
 }
@@ -245,7 +255,7 @@ span.word {
    line-height: 135px;
    margin: 0 auto;
     font-weight: bold;
-    font-size: .5rem;
+    font-size: 1.25rem;
   
 }
 .number {
@@ -258,6 +268,10 @@ span.word {
     color: black;
     padding-left: 1rem;
     margin-top: -5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
 }
 
 .modal-footer {
@@ -272,6 +286,7 @@ span.word {
 }
 .btn btn-light {
     text-decoration-color: gray;
+    
     
 
 }
@@ -291,6 +306,12 @@ span.word {
 }
 
 
+.form {
+    width: 75%;
+}
 
+.round1 {
+    border:1px;
+}
 
 

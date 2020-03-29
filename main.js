@@ -2,7 +2,7 @@ var randomCodeArray = [[1,2,3],[1,2,4],[1,3,2],[1,3,4],[1,4,2],[1,4,3],[2,1,3],[
 
 var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
-var randomCodeIndex = [[22, 10, 14, 3, 5 ,24, 6, 1], [13, 16, 12, 21, 23, 8, 7, 17], [ 1,23,17, 5,22, 6, 2, 7],[ 3,14,13,8,15,18, 4,20],[16,2,18,19, 1,11,12, 6],[ 9,4,22, 3,15,10, 5,17],[14,24,23, 8,21, 7,20,13],[ 9,4,22, 3,15,10, 5,17],[18,6, 4, 8,23,10,13,24],[5, 9,21,22,14, 1, 3,11],[17,16,2,20,12,15,19,7],[ 11,8, 5, 6,10,21,12,17],[3, 7,22, 5, 6, 9,11,19]];
+var randomCodeIndex = [[22, 10, 14, 3, 5 ,0, 6, 1], [13, 16, 12, 21, 23, 8, 7, 17], [ 1,23,17, 5,22, 6, 2, 7],[ 3,14,13,8,15,18, 4,20],[16,2,18,19, 1,11,12, 6],[ 9,4,22, 3,15,10, 5,17],[14,0,23, 8,21, 7,20,13],[18,6, 4, 8,23,10,13,0],[5, 9,21,22,14, 1, 3,11],[17,16,2,20,12,15,19,7],[ 11,8, 5, 6,10,21,12,17],[3, 7,22, 5, 6, 9,11,19]];
 
 var randomWordArray = ["HONEY","VETERINARIAN", "BLIZZARD", "OPERA", "SOCK", "FOREST", "REVOLUTION", "SHAKESPEARE", "PIANO", "MARIJUANA", "POGGERS", "MAPLE", "PIRATE", "DRAGON", "PLANE", "PHOENIX", "BRAIN", "MUFFIN", "PINECONE", "JUPITER", "DOMINOES", "HOURGLASS", "69420", "YEET", "SANDPAPER", "QUIDDITCH", "DUST BUNNY"];
 
@@ -10,7 +10,10 @@ var randomWordArray = ["HONEY","VETERINARIAN", "BLIZZARD", "OPERA", "SOCK", "FOR
 var yourWordSet=[];
 var theirWordSet=[];
 
-var CodeIndex;
+
+var yourCodeIndex;
+var theirCodeIndex;
+
 
 var letter;
 
@@ -76,7 +79,7 @@ function roomCombo() {
 //HANDLE DATA INPUT AND GENERATION OF FIRST SCREEN
 function onDisplay() {
     
-    //CHANGE DISPLAY ON SCREEN
+    //CHANGE DISPLAY ON SCREEN - testing
 //    document.getElementById("mainbox").style.display = "none";
 //    document.getElementById("mainbox2").style.display = "flex";
     
@@ -84,10 +87,10 @@ function onDisplay() {
     var current_date = new Date();
     var cday = current_date.getDate();
     var chour = current_date.getHours();
-    var cminute = current_date.getMinutes();
     
     //WORD SET ASSIGNMENT
     var j;
+    var codeIndex
     for (j = 0; j < 2; j++) {
         var wordIndex;
         if (isNaN(combo[j])) {
@@ -95,13 +98,17 @@ function onDisplay() {
         } else {
             wordIndex = combo[j];
         }
-
+        
+        codeIndex = (wordIndex*17 +cday)%randomCodeIndex.length;
         wordIndex = wordIndex % randomWordArray.length;
+        
 
         if (document.getElementById("warmGradientRadio").checked) {
             yourWordSet.push(randomWordArray[wordIndex]);
+
         } else {
             theirWordSet.push(randomWordArray[wordIndex]);
+
         }
         randomWordArray.splice(wordIndex,1);
         wordIndex = (wordIndex + cday) % randomWordArray.length;
@@ -113,6 +120,14 @@ function onDisplay() {
         
         randomWordArray.splice(wordIndex,1);   
     }
+    
+    if (document.getElementById("warmGradientRadio").checked) {
+            yourCodeIndex = randomCodeIndex[codeIndex];
+            randomCodeIndex.splice(codeIndex,1);
+        } else {
+            theirCodeIndex = randomCodeIndex[codeIndex];
+            randomCodeIndex.splice(codeIndex,1);
+        }
     for (j = 2; j < 4; j++) {
         
         if (isNaN(combo[j])) {
@@ -120,7 +135,7 @@ function onDisplay() {
         } else {
             wordIndex = combo[j];
         }
-
+        codeIndex = (wordIndex*17 +cday)%randomCodeIndex.length;
         wordIndex = wordIndex % randomWordArray.length;
 
         if (document.getElementById("coldGradientRadio").checked) {
@@ -132,12 +147,22 @@ function onDisplay() {
         wordIndex = (wordIndex + cday) % randomWordArray.length;
         if ((document.getElementById("coldGradientRadio").checked)) {
             yourWordSet.push(randomWordArray[wordIndex]);
+            yourCodeIndex = codeIndex
         } else {
             theirWordSet.push(randomWordArray[wordIndex]);
+            theirCodeIndex = codeIndex;
         }
         
         randomWordArray.splice(wordIndex,1);   
     }
+    
+    if (document.getElementById("coldGradientRadio").checked) {
+            yourCodeIndex = randomCodeIndex[codeIndex];
+            randomCodeIndex.splice(codeIndex,1);
+        } else {
+            theirCodeIndex = randomCodeIndex[codeIndex];
+            randomCodeIndex.splice(codeIndex,1);
+        }
     
     //COLOR CHANGE
     if (document.getElementById("warmGradientRadio").checked) {
@@ -149,8 +174,7 @@ function onDisplay() {
     //SHOW WORD SET ON SCREEN
     var k;
     for (k = 0; k < 4; k++) {
-        document.getElementById("word" + (k+1)).innerHTML = yourWordSet[k] + 
-            "other team: " + theirWordSet[k];
+        document.getElementById("word" + (k+1)).innerHTML = yourWordSet[k];
     }
    
  
