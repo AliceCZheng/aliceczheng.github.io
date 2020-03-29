@@ -46,6 +46,7 @@ div {
     padding: 4rem;
     padding-bottom: 7rem;
     background-image: url("images/Fluorescent-Gradient.jpg");
+    background-size:cover;
     
     opacity: 1;
 }
@@ -57,6 +58,7 @@ div {
     padding-right: 0;
     padding-bottom: 4rem;
     background: url("images/Cold-Gradient.jpg") no-repeat center center;
+    background-size:cover;
     opacity: 1;
     width: 75%;
     display: none;
@@ -73,20 +75,23 @@ div {
 /*    background-image: url("images/Cold-Gradient.jpg");*/
     opacity: 1;
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-around;
 }
 
 /*comment out - for testing only*/
+/*
 #mainbox {
     display: block;
     
 }
-#mainbox2 {
+#mainbox2, #mainbox3 {
     display: flex;
 
 }
+*/
+
 
 form {
     display: inline-flex;
@@ -190,6 +195,27 @@ form {
     width: 70%;
     
 }
+.ex {
+    width: 16px;
+    height: 16px;
+    background-image: url(node_modules/bootstrap-icons/icons/x.svg);
+
+
+}
+.smallcheck {
+    width: 16px;
+    height: 16px;
+    background-image: url(node_modules/bootstrap-icons/icons/check.svg);
+
+}
+
+#x1:hover, #x2:hover,#x3:hover, #x4:hover {
+    background-image: url(node_modules/bootstrap-icons/icons/x-circle-fill.svg); 
+}
+
+#check1:hover, #check2:hover,#check3:hover, #check4:hover {
+    background-image: url(node_modules/bootstrap-icons/icons/check-circle.svg); 
+}
 
 #check{width: 25%;
 text-align: center;
@@ -255,7 +281,7 @@ span.word {
    line-height: 135px;
    margin: 0 auto;
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1rem;
   
 }
 .number {
@@ -310,8 +336,6 @@ span.word {
     width: 75%;
 }
 
-.round1 {
-    border:1px;
-}
+
 
 
