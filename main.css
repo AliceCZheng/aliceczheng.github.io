@@ -46,7 +46,9 @@ div {
     padding: 4rem;
     padding-bottom: 7rem;
     background-image: url("images/Fluorescent-Gradient.jpg");
-    background-size:cover;
+    background-size: cover;
+background-position: 50% 50%;
+
     
     opacity: 1;
 }
@@ -57,13 +59,15 @@ div {
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 4rem;
-    background: url("images/Cold-Gradient.jpg") no-repeat center center;
-    background-size:cover;
+    background: url("images/Cold-Gradient.jpg");
+
     opacity: 1;
     width: 75%;
     display: none;
     flex-direction: row;
     justify-content: space-around;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 #mainbox3 {
@@ -78,19 +82,50 @@ div {
     display: none;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+#mainbox4 {
+    border-radius: 1.5rem;
+/*    padding: 2rem;*/
+    margin-top: 2rem;
+    background-image: url("images/Cold-Gradient.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    text-align: center;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width:95%;
+    margin:1rem;
+}
+.roundnum {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    line-height:40px;
+    cursor: context-menu;
+}
+
+.dropdown-menu{
+    cursor: url(images/shocked-pikachu.cur),auto;
+}
+
+#roundnum1 {
+    padding-left: 3rem;
+
 }
 
 /*comment out - for testing only*/
 /*
 #mainbox {
-    display: block;
+    display: none;
     
 }
+*/
 #mainbox2, #mainbox3 {
     display: flex;
 
 }
-*/
 
 
 form {
@@ -109,7 +144,7 @@ form {
 .form-set {
     background: white;
     width: 45%;
-    height: 400px;
+    height: 555px;
     border-radius: 1rem;
     
 
@@ -119,7 +154,7 @@ form {
     width: 50%;
     height: 400px;
     border-radius: 1rem;
-    margin-bottom: -3rem;
+    margin-bottom: -6rem;
     
 
 }
@@ -130,23 +165,13 @@ form {
     height: 100%;
     margin-top: 0px;
     
-/*
-    border-top: 2px solid #00deff;
-    border-bottom:2px solid #00deff;
-    background-image: 
-        url(images/Rainbow-Gradient.jpg),
-        url(images/Rainbow-Gradient.jpg)
-    ;
-    background-size:4px 100%;
-    background-position:0 0, 100% 0;
-*/
+
     background-image: url(images/Rainbow-Gradient.jpg);
-    background-size: 100%;
+    background-size: cover;
+background-position: 50% 50%;
     background-repeat:no-repeat;
     border-radius: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+
 
 }
 .form-column {
@@ -157,27 +182,36 @@ form {
     
     border-top: 2px solid #ffffff;
     border-bottom:2px solid #ffffff;
-/*
-    background-image: 
-        url(images/Rainbow-Gradient.jpg),
-        url(images/Rainbow-Gradient.jpg)
-    ;
-    background-size:1px 100%;
-    background-position:0 0, 100% 0;
-*/
+
     background: rgba(255,255,255,0.3);
 
 }
 
-.form-row {
+
+
+.round1 {
+    background-color: rgba(255,255,255,0.7);
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     height:25px;
 }
 
-#round1 {
-    background: rgba(255,255,255,0.8);
+
+.round2, .round3, .round4, .round5, .round6, .round7, .round8  {
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height:25px;
+}
+
+
+
+#round2 {
+    background: rgba(255,255,255,0.7);
 }
 
 #inputClue {
@@ -185,8 +219,9 @@ form {
     background-color: transparent;
     border-style: none;
     border:none;
-    border-bottom: 1.5px solid white;
+    border-bottom: .5px solid white;
     border-right: 1.5px solid white;
+    
 /*    border-radius: 0px;*/
     
    height: 25px;
@@ -241,11 +276,11 @@ margin-top: 3px;}
 }
 #checkBox{
     width: 25%;
-
+    margin-top: -2px;
     text-align: center;
     padding-top: 2px;
-    border-right: 1.5px solid white;
-    border-bottom: 1.5px solid white;
+
+
     height: 25px;
 }
 .form-control {
@@ -336,6 +371,39 @@ span.word {
     width: 75%;
 }
 
+
+.form-clues {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.clue-column {
+    width: 25%;
+    height: 200px;
+
+}
+
+.main-input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.clue-column-input {
+    height: 200px;
+}
+
+
+#carrot {
+    background-image: url(node_modules/bootstrap-icons/icons/caret-down.svg);
+}
+
+#roundnum1 {
+/*    font-weight:bold;*/
+
+    text-decoration: overline underline;
+    text-decoration-color: black;
+}
 
 
 

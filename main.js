@@ -11,8 +11,8 @@ var yourWordSet=[];
 var theirWordSet=[];
 
 
-var yourCodeIndex;
-var theirCodeIndex;
+var yourCodeIndex=[];
+var theirCodeIndex=[];
 
 
 var letter;
@@ -20,6 +20,7 @@ var letter;
 var numCodes = 24;
 
 var round = 1;
+var oldround;
 
 var teamBoolean =0;
 var roomBoolean = 0;
@@ -183,6 +184,7 @@ function onDisplay() {
     for (k = 0; k < 4; k++) {
         document.getElementById("word" + (k+1)).innerHTML = yourWordSet[k];
     }
+    document.getElementById("code").innerHTML = randomCodeArray[yourCodeIndex[round-1]];
    
  
 }
@@ -191,19 +193,49 @@ function onDisplay() {
 
 
 
+function roundclick(roundnum) {
+    oldround = round;
+    round = roundnum;
+    
+    document.getElementById("roundnum" + round).style.textDecoration= "overline underline";
+    
+    document.getElementById("code").innerHTML = randomCodeArray[yourCodeIndex[round-1]];
+
+    
+    document.getElementById("roundnum" + oldround).style.textDecoration= "none";
+    
+    console.log("meow");
+    console.log(yourCodeIndex.toString());
+    console.log(theirCodeIndex.toString());
+    
+    
+    
+//    document.getElementsByClassName("round3").style.background = "rgba(255,255,255,0.7)";
+////    
+////    document.getElementsByClassName("round" + roundnum).style.backgroundColor = "white";
+//
+//    document.getElementsByClassName("round1").style.background = "rgba(255,255,255,0)";
+}
 
 
+function roundMO(roundnum) {   
+    document.getElementById("roundnum" + roundnum).style.textDecoration= "overline underline";
+    
 
+    
+}
+function roundMOut(roundnum) {
+    
 
+    if (roundnum != round) {
+    document.getElementById("roundnum" + roundnum).style.textDecoration= "none";
+    }
 
+    document.getElementById("roundnum" + oldround).style.textDecoration= "none";
 
-
-
-
-
-
-
-
+    
+    document.getElementById("roundnum" + round).style.textDecoration= "overline underline";
+}
 
 
 
