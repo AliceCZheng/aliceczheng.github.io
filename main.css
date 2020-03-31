@@ -60,14 +60,15 @@ background-position: 50% 50%;
     padding-right: 0;
     padding-bottom: 4rem;
     background: url("images/Cold-Gradient.jpg");
-
+    
     opacity: 1;
     width: 75%;
     display: none;
     flex-direction: row;
     justify-content: space-around;
-    background-size: cover;
+
     background-position: 50% 50%;
+    background-size: 100%;
 }
 
 #mainbox3 {
@@ -83,6 +84,7 @@ background-position: 50% 50%;
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 50px;
+    
 }
 
 #mainbox4 {
@@ -90,10 +92,10 @@ background-position: 50% 50%;
 /*    padding: 2rem;*/
     margin-top: 2rem;
     background-image: url("images/Cold-Gradient.jpg");
-    background-size: cover;
+    background-size: 100%;
     background-position: 50% 50%;
     text-align: center;
-    display: inline-flex;
+    display: none;
     justify-content: space-around;
     flex-direction: row;
     width:95%;
@@ -121,11 +123,11 @@ background-position: 50% 50%;
     display: none;
     
 }
-*/
 #mainbox2, #mainbox3 {
     display: flex;
 
 }
+*/
 
 
 form {
@@ -189,7 +191,7 @@ background-position: 50% 50%;
 
 
 
-.round1 {
+#round1, #round11, #round111, #round111, #round1111, #round11111, #round111111  {
     background-color: rgba(255,255,255,0.7);
 
     display: flex;
@@ -199,8 +201,50 @@ background-position: 50% 50%;
 }
 
 
-.round2, .round3, .round4, .round5, .round6, .round7, .round8  {
+#round2, #round22, #round222, #round222, #round2222, #round22222, #round222222  {
 
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height:25px;
+}
+#round3, #round33, #round333, #round333, #round3333, #round33333, #round333333  {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height:25px;
+}
+#round4, #round44, #round444, #round444, #round4444, #round44444, #round444444  {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height:25px;
+}
+#round5, #round55, #round555, #round555, #round5555, #round55555, #round555555  {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height:25px;
+}
+#round6, #round66, #round666, #round666, #round6666, #round66666, #round666666  {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height:25px;
+}
+#round7, #round77, #round777, #round777, #round7777, #round77777, #round777777  {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height:25px;
+}
+#round8, #round88, #round888, #round888, #round8888, #round88888, #round888888  {
 
     display: flex;
     flex-direction: row;
@@ -209,10 +253,6 @@ background-position: 50% 50%;
 }
 
 
-
-#round2 {
-    background: rgba(255,255,255,0.7);
-}
 
 #inputClue {
     width: 100%;

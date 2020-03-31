@@ -37,6 +37,8 @@ var check3 = false;
 var check4 = false;
 var check2 = false;
 
+var yourTeamName;
+var theirTeamName;
 
 
 //HANDLE TEAM NAME ENTERING FUNCTIONS
@@ -45,6 +47,7 @@ function teamName() {
     var teamNameInput = document.getElementById("team-name-input");
     var teamName = document.getElementById("team-name");
     teamName.innerHTML = teamNameInput.value;
+    yourTeamName = teamNameInput.value;
     //CHECK TEAM HAS CORRECT VALUE
     if (teamNameInput.value != "") {
         teamBoolean += 1;
@@ -90,6 +93,7 @@ function onDisplay() {
     document.getElementById("mainbox2").style.display = "flex";
     
     document.getElementById("mainbox3").style.display = "flex";
+    document.getElementById("mainbox4").style.display = "flex";
     
     //GENERATE SET RANDOM STUFF
     var current_date = new Date();
@@ -175,8 +179,10 @@ function onDisplay() {
     //COLOR CHANGE
     if (document.getElementById("warmGradientRadio").checked) {
         document.getElementById("mainbox2").style.background = "url('images/Warm-Gradient.png') no-repeat center center";
+        document.getElementById("mainbox4").style.background = "url('images/Warm-Gradient.png') no-repeat center center";
     } else {
         document.getElementById("mainbox2").style.background = "url('images/Cold-Gradient.jpg') no-repeat center center";
+        document.getElementById("mainbox4").style.background = "url('images/Cold-Gradient.jpg') no-repeat center center";
     }
     
     //SHOW WORD SET ON SCREEN
@@ -185,6 +191,8 @@ function onDisplay() {
         document.getElementById("word" + (k+1)).innerHTML = yourWordSet[k];
     }
     document.getElementById("code").innerHTML = randomCodeArray[yourCodeIndex[round-1]];
+    
+    document.getElementById("yourTeamName").innerHTML = yourTeamName;
    
  
 }
@@ -194,6 +202,9 @@ function onDisplay() {
 
 
 function roundclick(roundnum) {
+    
+
+    
     oldround = round;
     round = roundnum;
     
@@ -201,20 +212,24 @@ function roundclick(roundnum) {
     
     document.getElementById("code").innerHTML = randomCodeArray[yourCodeIndex[round-1]];
 
+    document.getElementById("round"+roundnum).style.background = "rgba(255,255,255,.7)";
+    document.getElementById("round"+roundnum+roundnum).style.background = "rgba(255,255,255,.7)";
+    document.getElementById("round"+roundnum+roundnum+roundnum).style.background = "rgba(255,255,255,.7)";
+    document.getElementById("round"+roundnum+roundnum+roundnum+roundnum).style.background = "rgba(255,255,255,.7)";
+    document.getElementById("round"+roundnum+roundnum+roundnum+roundnum+roundnum).style.background = "rgba(255,255,255,.7)";
+    document.getElementById("round"+roundnum+roundnum+roundnum+roundnum+roundnum+roundnum).style.background = "rgba(255,255,255,.7)";
+    
+    document.getElementById("round"+oldround).style.background = "rgba(0,0,0,.05)";
+    document.getElementById("round"+oldround+oldround).style.background = "rgba(0,0,0,.05)";
+    document.getElementById("round"+oldround+oldround+oldround).style.background = "rgba(0,0,0,.05)";
+    document.getElementById("round"+oldround+oldround+oldround+oldround).style.background = "rgba(0,0,0,.05)";
+    document.getElementById("round"+oldround+oldround+oldround+oldround+oldround).style.background = "rgba(0,0,0,.05)";
+    document.getElementById("round"+oldround+oldround+oldround+oldround+oldround+oldround).style.background = "rgba(0,0,0,.05)";
+    
+    
     
     document.getElementById("roundnum" + oldround).style.textDecoration= "none";
     
-    console.log("meow");
-    console.log(yourCodeIndex.toString());
-    console.log(theirCodeIndex.toString());
-    
-    
-    
-//    document.getElementsByClassName("round3").style.background = "rgba(255,255,255,0.7)";
-////    
-////    document.getElementsByClassName("round" + roundnum).style.backgroundColor = "white";
-//
-//    document.getElementsByClassName("round1").style.background = "rgba(255,255,255,0)";
 }
 
 
