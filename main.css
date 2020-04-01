@@ -273,23 +273,33 @@ background-position: 50% 50%;
 .ex {
     width: 16px;
     height: 16px;
-    background-image: url(node_modules/bootstrap-icons/icons/x.svg);
+    background-image: url(images/x.png);
+    background-size:contain;
+    
 
 
 }
 .smallcheck {
     width: 16px;
     height: 16px;
-    background-image: url(node_modules/bootstrap-icons/icons/check.svg);
+    background-image: url(images/check.png);
+    background-size:contain;
 
 }
 
 #x1:hover, #x2:hover,#x3:hover, #x4:hover {
-    background-image: url(node_modules/bootstrap-icons/icons/x-circle-fill.svg); 
+    background-image: url(images/x-circle-fill.png); 
+    background-size:contain;
 }
 
 #check1:hover, #check2:hover,#check3:hover, #check4:hover {
-    background-image: url(node_modules/bootstrap-icons/icons/check-circle.svg); 
+    background-image: url(images/check-circle.png); 
+    background-size:contain;
+}
+
+#check1, #check2,#check3, #check4 {
+    background-image: url(images/check.png); 
+    background-size:contain;
 }
 
 #check{width: 25%;

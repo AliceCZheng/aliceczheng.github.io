@@ -261,153 +261,153 @@ function roundMOut(roundnum) {
 //Win Tracker X's and Checks
 function x1click() {
    if (x1) {
-       document.getElementById("x1").style.background="url(node_modules/bootstrap-icons/icons/x.svg)";
+       document.getElementById("x1").style.backgroundImage="url(images/x.png)";
        x1=false;
    } else { 
-        document.getElementById("x1").style.background="url(node_modules/bootstrap-icons/icons/x-circle-fill.svg)";
+        document.getElementById("x1").style.backgroundImage="url(images/x-circle-fill.png)";
        x1 = true;
     }
 }
-function x1MO() {   document.getElementById("x1").style.background="url(node_modules/bootstrap-icons/icons/x-circle-fill.svg)";
+function x1MO() {   document.getElementById("x1").style.backgroundImage="url(images/x-circle-fill.png)";
     
 }
 function x1MOut() {
     if (x1) {
-        document.getElementById("x1").style.background="url(node_modules/bootstrap-icons/icons/x-circle-fill.svg)";
+        document.getElementById("x1").style.backgroundImage="url(images/x-circle-fill.png)";
     } else {
-         document.getElementById("x1").style.background="url(node_modules/bootstrap-icons/icons/x.svg)";
+         document.getElementById("x1").style.backgroundImage="url(images/x.png)";
     }
 }
 function x2click() {
    if (x2) {
-       document.getElementById("x2").style.background="url(node_modules/bootstrap-icons/icons/x.svg)";
+       document.getElementById("x2").style.backgroundImage="url(images/x.png)";
        x2=false;
    } else { 
-        document.getElementById("x2").style.background="url(node_modules/bootstrap-icons/icons/x-circle-fill.svg)";
+        document.getElementById("x2").style.backgroundImage="url(images/x-circle-fill.png)";
        x2 = true;
     }
 }
-function x2MO() {   document.getElementById("x2").style.background="url(node_modules/bootstrap-icons/icons/x-circle-fill.svg)";
+function x2MO() {   document.getElementById("x2").style.backgroundImage="url(images/x-circle-fill.png)";
     
 }
 function x2MOut() {
     if (x2) {
-        document.getElementById("x2").style.background="url(node_modules/bootstrap-icons/icons/x-circle-fill.svg)";
+        document.getElementById("x2").style.backgroundImage="url(images/x-circle-fill.png)";
     } else {
-         document.getElementById("x2").style.background="url(node_modules/bootstrap-icons/icons/x.svg)";
+         document.getElementById("x2").style.backgroundImage="url(images/x.png)";
     }
 }
 function x3click() {
    if (x3) {
-       document.getElementById("x3").style.background="url(node_modules/bootstrap-icons/icons/x.svg)";
+       document.getElementById("x3").style.backgroundImage="url(images/x.png)";
        x3=false;
    } else { 
-        document.getElementById("x3").style.background="url(node_modules/bootstrap-icons/icons/x-circle-fill.svg)";
+        document.getElementById("x3").style.backgroundImage="url(images/x-circle-fill.png)";
        x3 = true;
     }
 }
-function x3MO() {   document.getElementById("x3").style.background="url(node_modules/bootstrap-icons/icons/x-circle-fill.svg)";
+function x3MO() {   document.getElementById("x3").style.backgroundImage="url(images/x-circle-fill.png)";
     
 }
 function x3MOut() {
     if (x3) {
-        document.getElementById("x3").style.background="url(node_modules/bootstrap-icons/icons/x-circle-fill.svg)";
+        document.getElementById("x3").style.backgroundImage="url(images/x-circle-fill.png)";
     } else {
-         document.getElementById("x3").style.background="url(node_modules/bootstrap-icons/icons/x.svg)";
+         document.getElementById("x3").style.backgroundImage="url(images/x.png)";
     }
 }
 function x4click() {
    if (x4) {
-       document.getElementById("x4").style.background="url(node_modules/bootstrap-icons/icons/x.svg)";
+       document.getElementById("x4").style.backgroundImage="url(images/x.png)";
        x4=false;
    } else { 
-        document.getElementById("x4").style.background="url(node_modules/bootstrap-icons/icons/x-circle-fill.svg)";
+        document.getElementById("x4").style.backgroundImage="url(images/x-circle-fill.png)";
        x4 = true;
     }
 }
-function x4MO() {   document.getElementById("x4").style.background="url(node_modules/bootstrap-icons/icons/x-circle-fill.svg)";
+function x4MO() {   document.getElementById("x4").style.backgroundImage="url(images/x-circle-fill.png)";
     
 }
 function x4MOut() {
     if (x4) {
-        document.getElementById("x4").style.background="url(node_modules/bootstrap-icons/icons/x-circle-fill.svg)";
+        document.getElementById("x4").style.backgroundImage="url(images/x-circle-fill.png)";
     } else {
-         document.getElementById("x4").style.background="url(node_modules/bootstrap-icons/icons/x.svg)";
+         document.getElementById("x4").style.backgroundImage="url(images/x.png)";
     }
 }
 function check1click() {
    if (check1) {
-       document.getElementById("check1").style.background="url(node_modules/bootstrap-icons/icons/check.svg)";
+       document.getElementById("check1").style.backgroundImage="url(images/check.png)";
        check1=false;
    } else { 
-        document.getElementById("check1").style.background="url(node_modules/bootstrap-icons/icons/check-circle.svg)";
+        document.getElementById("check1").style.backgroundImage="url(images/check-circle.png)";
        check1 = true;
     }
 }
-function check1MO() {   document.getElementById("check1").style.background="url(node_modules/bootstrap-icons/icons/check-circle.svg)";
+function check1MO() {   document.getElementById("check1").style.backgroundImage="url(images/check-circle.png)";
     
 }
 function check1MOut() {
     if (check1) {
-        document.getElementById("check1").style.background="url(node_modules/bootstrap-icons/icons/check-circle.svg)";
+        document.getElementById("check1").style.backgroundImage="url(images/check-circle.png)";
     } else {
-         document.getElementById("check1").style.background="url(node_modules/bootstrap-icons/icons/check.svg)";
+         document.getElementById("check1").style.backgroundImage="url(images/check.png)";
     }
 }
 function check2click() {
    if (check2) {
-       document.getElementById("check2").style.background="url(node_modules/bootstrap-icons/icons/check.svg)";
+       document.getElementById("check2").style.backgroundImage="url(images/check.png)";
        check2=false;
    } else { 
-        document.getElementById("check2").style.background="url(node_modules/bootstrap-icons/icons/check-circle.svg)";
+        document.getElementById("check2").style.backgroundImage="url(images/check-circle.png)";
        check2 = true;
     }
 }
-function check2MO() {   document.getElementById("check2").style.background="url(node_modules/bootstrap-icons/icons/check-circle.svg)";
+function check2MO() {   document.getElementById("check2").style.backgroundImage="url(images/check-circle.png)";
     
 }
 function check2MOut() {
     if (check2) {
-        document.getElementById("check2").style.background="url(node_modules/bootstrap-icons/icons/check-circle.svg)";
+        document.getElementById("check2").style.backgroundImage="url(images/check-circle.png)";
     } else {
-         document.getElementById("check2").style.background="url(node_modules/bootstrap-icons/icons/check.svg)";
+         document.getElementById("check2").style.backgroundImage="url(images/check.png)";
     }
 }
 function check3click() {
    if (check3) {
-       document.getElementById("check3").style.background="url(node_modules/bootstrap-icons/icons/check.svg)";
+       document.getElementById("check3").style.backgroundImage="url(images/check.png)";
        check3=false;
    } else { 
-        document.getElementById("check3").style.background="url(node_modules/bootstrap-icons/icons/check-circle.svg)";
+        document.getElementById("check3").style.backgroundImage="url(images/check-circle.png)";
        check3 = true;
     }
 }
-function check3MO() {   document.getElementById("check3").style.background="url(node_modules/bootstrap-icons/icons/check-circle.svg)";
+function check3MO() {   document.getElementById("check3").style.backgroundImage="url(images/check-circle.png)";
     
 }
 function check3MOut() {
     if (check3) {
-        document.getElementById("check3").style.background="url(node_modules/bootstrap-icons/icons/check-circle.svg)";
+        document.getElementById("check3").style.backgroundImage="url(images/check-circle.png)";
     } else {
-         document.getElementById("check3").style.background="url(node_modules/bootstrap-icons/icons/check.svg)";
+         document.getElementById("check3").style.backgroundImage="url(images/check.png)";
     }
 }
 function check4click() {
    if (check4) {
-       document.getElementById("check4").style.background="url(node_modules/bootstrap-icons/icons/check.svg)";
+       document.getElementById("check4").style.backgroundImage="url(images/check.png)";
        check4=false;
    } else { 
-        document.getElementById("check4").style.background="url(node_modules/bootstrap-icons/icons/check-circle.svg)";
+        document.getElementById("check4").style.backgroundImage="url(images/check-circle.png)";
        check4 = true;
     }
 }
-function check4MO() {   document.getElementById("check4").style.background="url(node_modules/bootstrap-icons/icons/check-circle.svg)";
+function check4MO() {   document.getElementById("check4").style.backgroundImage="url(images/check-circle.png)";
     
 }
 function check4MOut() {
     if (check4) {
-        document.getElementById("check4").style.background="url(node_modules/bootstrap-icons/icons/check-circle.svg)";
+        document.getElementById("check4").style.backgroundImage="url(images/check-circle.png)";
     } else {
-         document.getElementById("check4").style.background="url(node_modules/bootstrap-icons/icons/check.svg)";
+         document.getElementById("check4").style.backgroundImage="url(images/check.png)";
     }
 }
