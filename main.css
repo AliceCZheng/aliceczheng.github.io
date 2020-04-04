@@ -67,8 +67,8 @@ background-position: 50% 50%;
     flex-direction: row;
     justify-content: space-around;
 
-    background-position: 50% 50%;
-    background-size: 100%;
+   
+    background-size: cover;
 }
 
 #mainbox3 {
