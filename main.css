@@ -21,8 +21,59 @@ body {
 */
 }
 
-#button {
+.button {
+    padding:1rem;
+    margin-left: 40rem;
+    margin-right: 40rem;
+    
+}
+.button1 {
+    background-image: url("images/buttons/1.jpg");
+}
 
+.button2{
+    background-image: url("images/buttons/2.jpg");
+}
+.button3{
+    background-image: url("images/buttons/3.jpg");
+}
+
+a {
+    text-decoration-color: white;
+
+    color:white;
+    width: 300px;
+}
+
+a:hover {
+    text-decoration-color: white;
+    text-decoration: underline;
+}
+
+.buttonbox {
+    border-radius: 1.5rem;
+    color:white;
+
+/*    text-decoration: underline;*/
+    
+    
+    background-size: cover;
+    background-position: 50% 50%;
+    max-width:300px;
+    min-width: 100px;
+    opacity: 1;
+
+}
+
+.buttonbox:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+h3{ 
+    padding-bottom: 1rem;
+    color: white;
+    
 }
 
 div {
@@ -48,8 +99,8 @@ div {
     background-image: url("images/Fluorescent-Gradient.jpg");
     background-size: cover;
 background-position: 50% 50%;
-
-    
+ max-width:400px;
+    min-width: 400px;
     opacity: 1;
 }
 

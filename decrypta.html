@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+    <title>:O</title>
+<!--     <link rel="stylesheet" type="text/css" href="main.css"> -->
+    <link rel="stylesheet" type="text/css" href="mobile.css" media="screen, handheld" />
+    <link rel="stylesheet" type="text/css" href="main.css" media="screen  and (min-width: 40.5em)" />
+    <script src="https://d3js.org/d3.v4.min.js"></script>   
+    <script src="main.js" type="text/javascript"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="icon" type="image/jpg" href="images/shocked-pikachu.jpg" />
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+
+  </head>
+  <body class="bg" >
+      
+    <div id="background" >
+        <header class="container">
+            <div class="name" class="mx-auto" style="text-align:center"><h1 >Decrypta.</h1></div>
+        </header>
+    
+      
+    <!-- intialize inputs box -->
+    <div style="width: 400px;" class="container" id="mainbox" >  
+        <!--room code input-->
+        
+        <div class="input-group mb-3">
+            <h3>Room Combo: <span id="room-combo"></span></h3>
+            <p>(Choose any 4 letter/number combination. Make sure your gamemates enter the same code)</p>
+
+           
+          <input type="text" class="form-control" placeholder="ex. 5WJ4" aria-label="room combo" aria-describedby="button-addon1" id="room-combo-input">
+          <div class="input-group-append">
+            <button class="btn btn-warning" onclick="roomCombo()"  type="button" id="button-room-combo">Confirm</button>
+          </div>
+        
+        </div>
+        
+        <!--team name input-->
+        <div class="input-group mb-3">
+            <h3>Team Name: <span id="team-name"></span></h3>
+            <p>(You must insert the exact same name as your teammate)</p>
+          <input type="text" class="form-control" placeholder="ex. Flippy Floopers" aria-label="team name" aria-describedby="button-addon2" id="team-name-input">
+          <div class="input-group-append">
+            <button class="btn btn-warning" onclick="teamName()"  type="button" id="button-team-name">Confirm</button>
+          </div>
+        
+        </div> 
+        <div class="modal-footer">
+        <div class="form">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="warmGradientRadio" value="option1" checked>
+          <label class="form-check-label" for="exampleRadios1">
+            warm gradient team
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="coldGradientRadio" value="option2">
+          <label class="form-check-label" for="exampleRadios2">
+            cool gradient team
+          </label>
+        </div>
+        </div>
+        <div class="buttonside">
+        <button type="button" id="continue-button" class="btn btn-light" onclick="onDisplay()" disabled>Continue</button>
+            </div>
+      </div>
+        
+        
+    </div>
+      
+      
+    <div class="container" id="mainbox2" >
+        <div class="word-set" >
+            <div class="word-box" style='z-index: 1'><span id="word1" class="word"></span></div>
+            <div class="number" style='z-index: 2'><h3>1</h3></div>
+        </div>
+
+        
+        <div class="word-set">
+            <div class="word-box" style='z-index: 1'><span class="word" id="word2"></span></div>
+            <div class="number" style='z-index: 2'><h3>2</h3></div>
+        </div>
+
+        
+        <div class="word-set">
+            <div class="word-box" style='z-index: 1'><span id="word3" class="word"></span></div>
+            <div class="number" style='z-index: 2'><h3>3</h3></div>
+        </div>
+
+        
+        <div class="word-set">
+            <div class="word-box" style='z-index: 1'><span id="word4" class="word"></span></div>
+            <div class="number" style='z-index: 2'><h3>4</h3></div>
+        </div>
+        
+    </div>
+        
+    <div class="container" id= "mainbox4">
+        <div style="display: inline-flex; justify-content: space-around; flex-direction: row;"><h4>Round</h4>
+            <div id="roundnum1" class="roundnum" onmouseover="roundMO(1)" onmouseout="roundMOut(1)"onclick="roundclick(1)">1</div>
+            <div id="roundnum2" class="roundnum" onmouseover="roundMO(2)" onmouseout="roundMOut(2)"onclick="roundclick(2)"v>2</div>
+            <div id="roundnum3" class="roundnum" onmouseover="roundMO(3)" onmouseout="roundMOut(3)"onclick="roundclick(3)">3</div>
+            <div id="roundnum4" class="roundnum" onmouseover="roundMO(4)" onmouseout="roundMOut(4)"onclick="roundclick(4)">4</div>
+            <div id="roundnum5" class="roundnum" onmouseover="roundMO(5)" onmouseout="roundMOut(5)"onclick="roundclick(5)">5</div>
+            <div id="roundnum6" class="roundnum" onmouseover="roundMO(6)" onmouseout="roundMOut(6)"onclick="roundclick(6)">6</div>
+            <div id="roundnum7" class="roundnum"onmouseover="roundMO(7)" onmouseout="roundMOut(7)"onclick="roundclick(7)">7</div>
+            <div id="roundnum8" class="roundnum" onmouseover="roundMO(8)" onmouseout="roundMOut(8)"onclick="roundclick(8)">8</div>
+        
+        </div>
+        
+        <div style="display: inline-flex; justify-content: space-around; flex-direction: row; line-height: 42px;"><h4>Code</h4> 
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: rgba(255,255,255,0);">
+                <svg class="bi bi-card-text" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 00-.5.5v9a.5.5 0 00.5.5h13a.5.5 0 00.5-.5v-9a.5.5 0 00-.5-.5zm-13-1A1.5 1.5 0 000 3.5v9A1.5 1.5 0 001.5 14h13a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0014.5 2h-13z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M3 5.5a.5.5 0 01.5-.5h9a.5.5 0 010 1h-9a.5.5 0 01-.5-.5zM3 8a.5.5 0 01.5-.5h9a.5.5 0 010 1h-9A.5.5 0 013 8zm0 2.5a.5.5 0 01.5-.5h6a.5.5 0 010 1h-6a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
+</svg>
+                <svg class="bi bi-caret-down-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 01.753 1.659l-4.796 5.48a1 1 0 01-1.506 0z"/>
+</svg>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="text-align: center;">
+                <span id="code"></span>
+              </div>
+            </div>
+        </div>
+
+
+    </div>
+        
+    <div class="container" id="mainbox3" >
+        <div class="form-set" >
+            <div class="teamname1" style='z-index: 1'><div style="width:75%;"><h3 >Other Team</h3></div>
+                <div style="width:25%; display:flex; margin-top:30px;"><div class="ex" id="x1" onclick="x1click()" onmouseover="x1MO()" onmouseout="x1MOut()"></div><div class="ex" id="x2" onclick="x2click()" onmouseover="x2MO()" onmouseout="x2MOut()"></div><div class="smallcheck" id="check1" onmouseover="check1MO()" onmouseout="check1MOut()"onclick="check1click()"></div><div class="smallcheck" onmouseover="check2MO()" onmouseout="check2MOut()"id="check2" onclick="check2click()"></div></div>
+            </div>
+            <div class="form-box" style='z-index: 2'>
+                <div class="main-input-container" style='z-index: 1'>
+                    <div class="form-insides">
+                        <div class="columnlabel" style='z-index: 1'><p id="wordclue">Word Clue</p><svg id="question" class="bi bi-question-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"/>
+      <path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+    </svg><svg id = "check" class="bi bi-check-box" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 003 14.5h10a1.5 1.5 0 001.5-1.5V8a.5.5 0 00-1 0v5a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V3a.5.5 0 01.5-.5h8a.5.5 0 000-1H3A1.5 1.5 0 001.5 3v10z" clip-rule="evenodd"/>
+    </svg></div>
+                        <div class="form-column" style='z-index: 2'>
+                            <div id="round1">
+                                <div id="inputClueBox">
+                                  <input placeholder="---" type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" disabled="disabled" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round1-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div  id="round11">
+                                <div id="inputClueBox">
+                                  <input placeholder="---"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" disabled="disabled"class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round1-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div id="round111">
+                                <div id="inputClueBox">
+                                  <input  placeholder="---"   type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select disabled="disabled" id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round1-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+                            <div id="gap"></div>
+
+                            <div id="round2">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round2-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round22">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round2-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round222">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round2-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div id="gap"></div>
+
+                            <div id="round3">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round3-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round33">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round3-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round333" id="round3b">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round3-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div id="gap"></div>
+
+
+                            <div   id="round4">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round4-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round44">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round4-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round444" id="round4b">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round4-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div id="gap"></div>
+
+                        </div>
+
+                    </div>
+                    <div class="form-insides">
+                        <div class="columnlabel" style='z-index: 1'><p id="wordclue">Word Clue</p><svg id="question" class="bi bi-question-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"/>
+      <path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+    </svg><svg id = "check" class="bi bi-check-box" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 003 14.5h10a1.5 1.5 0 001.5-1.5V8a.5.5 0 00-1 0v5a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V3a.5.5 0 01.5-.5h8a.5.5 0 000-1H3A1.5 1.5 0 001.5 3v10z" clip-rule="evenodd"/>
+    </svg></div>
+                        <div class="form-column" style='z-index: 2'>
+                            <div   id="round5">
+                                <div id="inputClueBox">
+                                  <input placeholder="" type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode"  class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round5-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round55">
+                                <div id="inputClueBox">
+                                  <input placeholder=""  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round5-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round555">
+                                <div id="inputClueBox">
+                                  <input  placeholder=""   type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round5-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+                            <div id="gap"></div>
+
+                            <div   id="round6">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round6-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round66">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round6-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round666">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round6-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div id="gap"></div>
+
+                            <div   id="round7">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round7-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round77">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round7-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round777" id="round3b">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round7-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div id="gap"></div>
+
+
+                            <div   id="round8">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round8-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round88">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round8-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round888" id="round4b">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round8-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div id="gap"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="form-clues" style='z-index: 2'>
+
+                    <div id="clue-column1" class="clue-column">
+                        <div style=" text-align: center; margin-bottom: -12px; "><p style="color: dimgrey; background: rgba(255,255,255,0.7); ">1</p></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;  border-top: 2px solid white;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                    </div>
+                    <div id="clue-column2" class="clue-column"><div style=" text-align: center; margin-bottom: -12px; "><p style="color: dimgrey; background: rgba(255,255,255,0.7); ">2</p></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;  border-top: 2px solid white;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div></div>
+                    <div id="clue-column3" class="clue-column"><div style=" text-align: center; margin-bottom: -12px; background: rgba(255,255,255,0.7); "><p style="color: dimgrey;">3</p></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;  border-top: 2px solid white;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div></div>
+                    <div id="clue-column4" class="clue-column"><div style=" text-align: center; margin-bottom: -12px; "><p style="color: dimgrey; background: rgba(255,255,255,0.7);">4</p></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;  border-top: 2px solid white;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div></div>
+                </div>
+            
+            </div>
+            
+            
+            
+        </div>
+        
+        <div class="form-set" >
+            <div class="teamname1" style='z-index: 1'><div style="width:75%;"><h3 id="yourTeamName">Your Team</h3></div>
+                <div style="width:25%; display:flex; margin-top:30px;"><div class="ex" id="x3" onclick="x3click()" onmouseover="x3MO()" onmouseout="x3MOut()"></div><div class="ex" id="x4" onclick="x4click()" onmouseover="x4MO()" onmouseout="x4MOut()"></div><div class="smallcheck" id="check3" onmouseover="check3MO()" onmouseout="check3MOut()"onclick="check3click()"></div><div class="smallcheck" onmouseover="check4MO()" onmouseout="check4MOut()"id="check4" onclick="check4click()"></div></div>
+            </div>
+            <div class="form-box" style='z-index: 2'>
+                <div class="main-input-container" style='z-index: 1'>
+                    <div class="form-insides">
+                        <div class="columnlabel" style='z-index: 1'><p id="wordclue">Word Clue</p><svg id="question" class="bi bi-question-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"/>
+      <path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+    </svg><svg id = "check" class="bi bi-check-box" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 003 14.5h10a1.5 1.5 0 001.5-1.5V8a.5.5 0 00-1 0v5a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V3a.5.5 0 01.5-.5h8a.5.5 0 000-1H3A1.5 1.5 0 001.5 3v10z" clip-rule="evenodd"/>
+    </svg></div>
+                        <div class="form-column" style='z-index: 2'>
+                            <div   id="round1111">
+                                <div id="inputClueBox">
+                                  <input placeholder="---" type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode"  class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round1-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round11111">
+                                <div id="inputClueBox">
+                                  <input placeholder="---"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round1-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round111111">
+                                <div id="inputClueBox">
+                                  <input  placeholder="---"   type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select  id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round1-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+                            <div id="gap"></div>
+
+                            <div   id="round2222">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round2-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round22222">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round2-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round222222">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round2-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div id="gap"></div>
+
+                            <div   id="round3333">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round3-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round33333">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round3-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round333333" id="round3b">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round3-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div id="gap"></div>
+
+
+                            <div   id="round4444">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round4-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round44444">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round4-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round444444" id="round4b">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round4-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div id="gap"></div>
+
+                        </div>
+
+                    </div>
+                    <div class="form-insides">
+                        <div class="columnlabel" style='z-index: 1'><p id="wordclue">Word Clue</p><svg id="question" class="bi bi-question-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"/>
+      <path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+    </svg><svg id = "check" class="bi bi-check-box" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 003 14.5h10a1.5 1.5 0 001.5-1.5V8a.5.5 0 00-1 0v5a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V3a.5.5 0 01.5-.5h8a.5.5 0 000-1H3A1.5 1.5 0 001.5 3v10z" clip-rule="evenodd"/>
+    </svg></div>
+                        <div class="form-column" style='z-index: 2'>
+                            <div   id="round5555">
+                                <div id="inputClueBox">
+                                  <input placeholder="" type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode"  class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round5-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round55555">
+                                <div id="inputClueBox">
+                                  <input placeholder=""  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round5-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round555555">
+                                <div id="inputClueBox">
+                                  <input  placeholder=""   type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select  id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round5-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+                            <div id="gap"></div>
+
+                            <div   id="round6666">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round6-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round66666">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round6-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round666666">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round6-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div id="gap"></div>
+
+                            <div   id="round7777">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round7-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round77777">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round7-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round777777" id="round3b">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round7-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div id="gap"></div>
+
+
+                            <div   id="round8888">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round8-1">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round88888">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round8-2">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div   id="round888888" id="round4b">
+                                <div id="inputClueBox">
+                                  <input type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                                <div id="inputCodeBox">
+                                  <select id="inputCode" class="form-control input-sm">
+                                    <option selected>#</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                  </select>
+                                </div>
+                                <div id="checkBox" id="round8-3">
+                                  <input placeholder="#"  type="text" class="form-control input-sm" id="inputClue">
+                                </div>
+                            </div>
+
+                            <div id="gap"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="form-clues" style='z-index: 2'>
+
+                    <div id="clue-column1" class="clue-column">
+                        <div style=" text-align: center; margin-bottom: -12px; "><p style="color: dimgrey; background: rgba(255,255,255,0.7); ">1</p></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;  border-top: 2px solid white;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                    </div>
+                    <div id="clue-column2" class="clue-column"><div style=" text-align: center; margin-bottom: -12px; "><p style="color: dimgrey; background: rgba(255,255,255,0.7); ">2</p></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;  border-top: 2px solid white;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div></div>
+                    <div id="clue-column3" class="clue-column"><div style=" text-align: center; margin-bottom: -12px; background: rgba(255,255,255,0.7); "><p style="color: dimgrey;">3</p></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;  border-top: 2px solid white;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div></div>
+                    <div id="clue-column4" class="clue-column"><div style=" text-align: center; margin-bottom: -12px; "><p style="color: dimgrey; background: rgba(255,255,255,0.7);">4</p></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;  border-top: 2px solid white;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div>
+                        <div id="inputClueBox" style="width:100%; height:25px;"><input placeholder=""  type="text" class="form-control input-sm" class="clue-input" style="width:100%; height:25px;" id="inputClue"></div></div>
+                </div>
+            
+            </div>
+            
+            
+            
+        </div>
+
+     
+    </div>
+      
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
